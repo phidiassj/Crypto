@@ -199,3 +199,20 @@
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再把 `refx` 的共同主線先抽出來，回填到報告的市場背景，而不是逐檔硬塞無關推文。
 - 若 `crypto.news / CoinGecko News` 沒有提供比 `CMC AI` 更高品質的新訊，就明講「未見更強外部催化」，不要為了形式硬補來源。
+
+## 2026-04-07
+
+### 本次新增觀察
+- 今天沿用 `playwright-cli` + 共享 session `aiyoperps-auth` 與 persistent profile，直接在目前 worktree 落 `.cache/daily-crypto-report/20260407/`，可穩定抓到 `160` 筆 Trending、`60` 檔清單1、`14` 檔清單2。
+- 今天 `CMC AI` 對清單2 的 14 檔全部都能直接命中 `learn-faq` JSON；把 `LatestNews / PeopleSaying / Roadmap` 先抽成簡化 bullet，再寫報告，會比人工逐頁讀更穩。
+- `refx` 在 26 小時條件內命中 `4` 份，今天最有用的仍是共同主線，不是逐幣訊息：`BTC / ETH 機構敘事延續`、`穩定幣 / 支付 / 合規` 偏多、`DeFi / perp infra` 仍有安全折價、`伊朗 / 荷姆茲海峽 / 通膨` 讓大盤高波動。
+
+### 本次踩坑
+- PowerShell 函式內不要把參數命名成 `$Args`；會和自動變數衝突，導致 `playwright-cli` 收到 `Unknown command: undefined`。
+- `CMC AI` 的 `PeopleSaying` 不一定有標準化價格位，且有些內容時間較舊；適合拿來補情緒或支撐/壓力，不適合直接當當日新催化。
+- 今天 `crypto.news / CoinGecko News` 對多數清單2 標的依舊沒有比 `CMC AI / CMC Community` 更高訊號的新增內容；若外部搜尋沒補強，就保留 `未見更強外部催化` 的寫法即可。
+
+### 下次優先順序
+- 先用 Playwright 生成 `target-list-2.json`，再批量抽 `cmc-ai.json` 與 `coin-notes.json`。
+- `refx` 持續只看 `CreationTime` 26 小時內的新檔，先抽共同主線，再決定哪些幣需要特別回填。
+- 若清單2 低於 `15` 檔，就維持實際檔數，不要為了形式硬補。
