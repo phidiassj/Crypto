@@ -216,3 +216,21 @@
 - 先用 Playwright 生成 `target-list-2.json`，再批量抽 `cmc-ai.json` 與 `coin-notes.json`。
 - `refx` 持續只看 `CreationTime` 26 小時內的新檔，先抽共同主線，再決定哪些幣需要特別回填。
 - 若清單2 低於 `15` 檔，就維持實際檔數，不要為了形式硬補。
+
+## 2026-04-08
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree，可穩定抓到 `164` 筆 Trending、`62` 檔清單1、`15` 檔清單2。
+- `refx` 在 `26` 小時條件內命中 `20260407-12.md`、`20260407-18.md`、`20260408-07.md` 共 `3` 份；這次最有用的共同主線是 `中東風險暫時降溫`、`BTC 重新站回 70k / 71k`、`穩定幣 / 支付 / 交易所擴張`。
+- 今天的主觀強勢組從前幾日的 `BTC / ETH / LINK`，明顯切到 `SOL / BNB / XRP / HYPE / ZRO` 這種更直接承接 risk-on 與法規/基建敘事的標的。
+- `CMC AI` 逐幣頁今天仍可穩定覆蓋清單2 全部 15 檔；對 `HNT / BNB / SOL / XRP / ENS / LTC / XAUt / DASH / PAXG / ZRO / ICP / FIL / HYPE` 都能直接抽出 `LatestNews / PeopleSaying / Roadmap`。
+
+### 本次踩坑
+- `CoinGecko News` 以搜尋方式做批量補充，仍容易命中報告 PDF 或無關搜尋結果，命中率明顯低於 `CMC AI / CMC Community`。
+- `crypto.news` 這次不是每檔都有高品質新稿；實際較有補強價值的是 `SOL / XRP / HYPE` 這些大型或高流量標的，其餘多數仍以 `CMC AI` 訊號較乾淨。
+- `CMC AI` 的社群段落會混入較舊的 technical takes，拿來抓 `支撐 / 壓力 / 市場情緒` 有用，但不能直接當作當日新催化。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 再先抽 `refx` 的共同主線，確認市場是 `risk-on` 還是 `避險`，再決定高 beta 組與黃金代幣組的權重。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補大幣或高流量標的） > `CoinGecko News`。
