@@ -234,3 +234,21 @@
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再先抽 `refx` 的共同主線，確認市場是 `risk-on` 還是 `避險`，再決定高 beta 組與黃金代幣組的權重。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補大幣或高流量標的） > `CoinGecko News`。
+
+## 2026-04-09
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree，可穩定抓到 `163` 筆 Trending、`58` 檔清單1、`15` 檔清單2。
+- `refx` 在 `26` 小時條件內命中 `20260408-07.md`、`20260408-13.md`、`20260408-19.md`、`20260409-07.md` 共 `4` 份；最重要的共同主線是 `美伊停火 -> 油價回落 -> 風險資產回暖`，以及 `stablecoin / 支付 rails / ETF 金融化`。
+- `CMC AI` 逐幣頁今天仍可穩定覆蓋清單2 全部 15 檔；用 `Href -> slug -> /cmc-ai/<slug>/latest-updates/` 直接抽 FAQ JSON 仍是最高效率做法。
+- `crypto.news` 這次真正有補強價值的只有少數標的，例如 `CVX` 的賣壓來源與 `ETH` / `MORPHO` 的基金會 treasury 管理；多數標的沒有比 `CMC AI / Community` 更強的逐幣新訊。
+
+### 本次踩坑
+- `CoinGecko News` 這次對清單2 的直接搜尋大多回首頁、歷史價格或非逐幣新聞頁，仍不適合批量當主來源。
+- `CMC AI` 的 `people are saying` 有時缺少明確 `consensus` 或混入較舊觀點；報告主體還是應以 `latest news` 為主、社群段落為輔。
+- 主工作樹 `E:\\work\\Crypto` 仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260409.md` 與 `Recommand.md`，不要把 unrelated 變更一起送出。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json`。
+- 再先讀 `refx` 26 小時內檔案，判斷市場背景是 `risk-on`、`避險` 還是 `監管驅動`，再決定報告主觀強勢組。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數高價值標的） > `CoinGecko News`。
