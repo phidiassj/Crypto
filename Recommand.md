@@ -270,3 +270,21 @@
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再先讀 `refx` 26 小時內檔案，判斷市場背景是偏 `BTC / 合規基建`、`防守避險`，還是重新回到高 beta。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數命中的大型或高流量標的） > `CoinGecko News`。
+
+## 2026-04-11
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree，可穩定抓到 `163` 筆 Trending、`60` 檔清單1、`11` 檔清單2。
+- `refx` 在 `26` 小時條件內命中 `20260410-07.md`、`20260410-13.md`、`20260410-19.md`、`20260411-07.md` 共 `4` 份；今天最重要的共同主線是 `Hormuz / 油價 / 通膨風險未退`、`BTC / 機構化商品 / 合規基建` 仍是主資金偏好、`prediction markets / wallet trading / AI agents` 開始變成交易入口競爭。
+- 直接用 `Href -> slug -> https://coinmarketcap.com/cmc-ai/<slug>/latest-updates/` 批量抽 `learn-faq` JSON，今天對清單2 的 `11` 檔全部命中；`latest news` 夠用，但 `people are saying` 仍常常缺值，報告應持續以 `latest news` 為主。
+- 今天清單2 明顯偏向 `平台幣 / 基建幣 / Solana 生態 beta`，不太像全面 altseason；`SOL / MNT / LIT / OKB` 的事件線與承接度相對完整。
+
+### 本次踩坑
+- `CoinGecko News` 對這 11 檔依舊容易回首頁、報告 PDF 或歷史行情頁，仍不適合批量逐幣當主來源。
+- `crypto.news` 這次即使有單篇命中，也多半已被 `CMC AI` 摘要覆蓋；與其逐檔硬搜，不如接受「未見更高可信外部催化」本身就是有效結論。
+- 主工作樹 `E:\\work\\Crypto` 今天仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260411.md` 與必要的 `Recommand.md`，不要把其他變更一起送出。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 再先讀 `refx` 26 小時內檔案，判斷市場背景是偏 `BTC / 合規基建`、`防守`，還是重新回到 `高 beta / Solana 生態`。
+- 若清單2 只有 `10-12` 檔，就維持實際筆數，不要為了形式硬補滿 `15`。
