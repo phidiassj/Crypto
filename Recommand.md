@@ -288,3 +288,19 @@
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再先讀 `refx` 26 小時內檔案，判斷市場背景是偏 `BTC / 合規基建`、`防守`，還是重新回到 `高 beta / Solana 生態`。
 - 若清單2 只有 `10-12` 檔，就維持實際筆數，不要為了形式硬補滿 `15`。
+
+## 2026-04-12
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree、`-ProfilePath` 改成 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `167` 筆 Trending、`62` 檔清單1、`9` 檔清單2。
+- 今天 `CMC AI` 逐幣頁對清單2 的 `9` 檔全部可直接命中 `learn-faq` JSON；`LatestNews` 仍是最穩的逐幣來源，`PeopleSaying / Roadmap` 依舊不穩定。
+- `refx` 在 `26` 小時條件內命中 `2` 份，但其中 `20260411-13.md` 是 X timeline 擷取失敗紀錄；整理市場背景時要排除這種「失敗日誌」，不要把它和有效市場訊號混在一起。
+
+### 本次踩坑
+- `refx` 不能只看時間條件，還要判斷檔案性質；若內容明確寫的是登入失敗、抓取失敗或無法取得時間軸，應視為執行紀錄，不是市場資料。
+- 今天 `crypto.news` 與 `CoinGecko News` 對 `BGB / HNT / PENDLE / NEXO / CAKE / ZEN` 等標的，依舊很難穩定命中比 `CMC AI / Community` 更高品質的逐幣新訊；若沒有更強來源，維持 `未見更強外部催化` 的寫法即可。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json`。
+- 再先讀 `refx` 26 小時內檔案，但先把「失敗日誌」和「有效市場整理」分開。
+- 若清單2 低於 `10` 檔，就維持實際檔數，並優先加強每檔的事件線品質，而不是硬補數量。
