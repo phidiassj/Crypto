@@ -304,3 +304,19 @@
 - 先跑 automation 腳本生成 `target-list-2.json`。
 - 再先讀 `refx` 26 小時內檔案，但先把「失敗日誌」和「有效市場整理」分開。
 - 若清單2 低於 `10` 檔，就維持實際檔數，並優先加強每檔的事件線品質，而不是硬補數量。
+## 2026-04-13
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree、`-ProfilePath` 指向 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`60` 檔清單1、`6` 檔清單2。
+- 今日 `refx` 在 `26` 小時條件內命中 `4` 份，且這次沒有混入失敗日誌；共同主線很一致，都是 `Hormuz / 美伊談判破局 / 油價與美元避險走強`，以及 `BTC / 穩定幣 / DeFi 基礎設施` 仍保有中期敘事。
+- `CMC AI` 逐幣頁今天對 `LPT / ZRO / SIREN / LIT / ETH / NEAR` 全部可直接命中 `learn-faq` JSON，足夠整理 `LatestNews` 與部分 `PeopleSaying / Roadmap`；外部站沒有持續補出比這更高訊號的逐幣內容。
+
+### 本次踩坑
+- 清單2 只剩 `6` 檔時，不要為了形式硬補標的；應改成加強每檔的事件線與風險描述，尤其是 `SIREN` 這種高波動題材幣。
+- `Security Scan = --` 的幣仍可能進入清單1，因為任務只排除 `Caution / unknow`；報告內要明寫 `--` 不等於安全，避免誤讀成已通過安全檢查。
+- `crypto.news` 與 `CoinGecko News` 今天對這 6 檔仍沒有穩定提供比 `CMC AI / Community` 更新、且更聚焦的內容；若沒有更強外部催化，就直接保留這個結論，不要硬湊來源。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json`。
+- 若清單2 低於 `8-10` 檔，優先把 `CMC AI latest news + roadmap + refx 共同主線` 組成高密度報告，而不是硬補數量。
+- 對 `Security Scan = --` 的候選，後續可考慮額外補一層快速風險註記，但不要改動目前的既有篩選條件。
