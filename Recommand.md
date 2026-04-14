@@ -320,3 +320,21 @@
 - 先跑 automation 腳本生成 `target-list-2.json`。
 - 若清單2 低於 `8-10` 檔，優先把 `CMC AI latest news + roadmap + refx 共同主線` 組成高密度報告，而不是硬補數量。
 - 對 `Security Scan = --` 的候選，後續可考慮額外補一層快速風險註記，但不要改動目前的既有篩選條件。
+
+## 2026-04-14
+
+### 本次新增觀察
+- 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree、`-ProfilePath` 指向 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `164` 筆 Trending、`61` 檔清單1、`12` 檔清單2。
+- `refx` 在 `26` 小時條件內命中 `20260413-08.md`、`20260413-14.md`、`20260413-20.md`、`20260414-07.md` 共 `4` 份；今天最有用的共同主線是 `Hormuz / 美伊 / 油價與美元風險溢價仍高`，但同時 `ETP/ETF 資金流、Strategy/BTC treasury、MiCA/SEC/tokenization` 仍偏中期正向。
+- 今天 `CMC AI` 對清單2 的 `12` 檔全部可直接命中 `learn-faq` JSON；真正能被外部站補強的只有少數高流量標的，例如 `LINK / SOL / XRP / AAVE`，其餘多數仍以 `CMC AI / Community` 最完整。
+- 今日最值得優先追蹤的是 `AAVE / LINK / FIL` 這類有產品、治理或基建推進的標的；`CVX / YFI` 則更像反彈交易而不是新主線。
+
+### 本次踩坑
+- `ConvertTo-Json` 序列化批量 `CMC AI` 結果時，若誤用 PowerShell 自帶唯讀變數名例如 `$Error`，會直接報錯；延續前次經驗，函式內參數與暫存變數都要避開保留名稱。
+- `crypto.news` 與 `CoinGecko News` 今天依舊不適合批量逐幣當主來源；若用一般搜尋一次丟太多小幣，命中結果很容易退化成價格頁、PDF 或舊資料。
+- `Security Scan = --` 這次再次大量出現在 `BNB / XRP / SOL / GT / AR / FIL` 等候選中；報告內必須繼續明講「未標記不等於安全」，避免被誤讀成已通過安全檢查。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 再先讀 `refx` 26 小時內檔案，確認市場是 `宏觀風險壓制下的結構分化`，還是重新回到全面 risk-on，之後再決定高 beta 組與核心組權重。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數大型或高流量標的） > `CoinGecko News`。
