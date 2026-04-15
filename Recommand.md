@@ -338,3 +338,20 @@
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再先讀 `refx` 26 小時內檔案，確認市場是 `宏觀風險壓制下的結構分化`，還是重新回到全面 risk-on，之後再決定高 beta 組與核心組權重。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數大型或高流量標的） > `CoinGecko News`。
+
+## 2026-04-15
+
+### 本次新增觀察
+- 今天在主 repo 新增本地腳本 `scripts/automation_daily_crypto_report.ps1`，直接以 `E:\work\browser-profiles\x-playwright` 跑 Playwright；`2026-04-15 08:10` 最新快照穩定抓到 `160` 筆 Trending、`59` 檔清單1、`13` 檔清單2。
+- 直接沿用 `Href -> slug -> https://coinmarketcap.com/cmc-ai/<slug>/latest-updates/` 批量抽 `learn-faq` JSON，今天對 `RIVER / APT / BNB / XRP / OKB / AR / AAVE / NEO / GT / NEXO / PAXG / XAUt / EDGE` 全部命中，仍是逐幣事件線最穩來源。
+- `refx` 在 `26` 小時條件內命中 `20260414-07.md`、`20260414-13.md`、`20260414-19.md`、`20260415-07.md` 共 `4` 份；今天最有用的共同主線已從單純宏觀避險，轉成 `risk-on 修復 + 合規平台/交易基建/支付 rails 升溫`，同時黃金代幣仍受平台分發與避險需求支撐。
+
+### 本次踩坑
+- `crypto.news` 站內搜尋 `?s=<keyword>` 今天仍幾乎只回固定頁、分類頁或低訊號結果，不適合批量逐幣當主來源。
+- `CoinGecko News` 今天也沒有穩定提供比 `CMC AI / Community` 更新、更聚焦的逐幣消息；若搜尋沒有補到東西，應接受「外部新訊不足」本身就是結論。
+- `Security Scan = --` 今天再次大量出現在 `APT / BNB / XRP / OKB / GT` 等候選，報告內仍要明講「未標記不等於安全」。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 再先讀 `refx` 26 小時內檔案，判斷市場是否延續 `risk-on + 合規平台主線`，或重新切回 `宏觀避險`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數大型或高流量標的） > `CoinGecko News`。
