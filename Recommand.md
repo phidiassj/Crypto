@@ -100,7 +100,7 @@
 ### 本次新增觀察
 - 用 `playwright-cli` 搭配共享 session `aiyoperps-auth` 與 persistent profile，可以在 headless 模式穩定抓 `Trending page=1/2` 與 `RSI`；今天結果是 `158` 筆 Trending、`58` 檔清單1、`15` 檔清單2。
 - 今天把抽表流程包成 `scripts/automation_daily_crypto_report.ps1`（在 automation worktree），可直接落 raw JSON 到 `.cache/daily-crypto-report/yyyyMMdd/`，後續整理報告時不必重跑整段瀏覽流程。
-- `CMC AI` 逐幣頁今天仍是最穩定的逐檔補資料來源；`LIT / MORPHO / LPT / ICP / LINK / XAUt / PAXG / AR / ZEN / QTUM` 都能直接拿到可用摘要。
+- `CMC AI` 逐幣頁今天仍是最穩的逐檔補資料來源；`LIT / MORPHO / LPT / ICP / LINK / XAUt / PAXG / AR / ZEN / QTUM` 都能直接拿到可用摘要。
 
 ### 本次踩坑
 - `playwright` MCP 仍會卡在 `C:\Windows\System32\.playwright-mcp` 的 `EPERM`，不要再用 `browser_navigate` 當主流程；改用 `playwright-cli` 或 shell 包裝比較穩。
@@ -355,3 +355,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 再先讀 `refx` 26 小時內檔案，判斷市場是否延續 `risk-on + 合規平台主線`，或重新切回 `宏觀避險`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數大型或高流量標的） > `CoinGecko News`。
+
+## 2026-04-17
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`62` 檔清單1、`3` 檔清單2。
+- 今日清單2 極度收斂到 `IP / TRUMP / ENS` 三檔，代表不是市場遍地超跌，而是只有少數熱門標的同時符合 `價格門檻 + 安全條件 + RSI <= 60`。
+- `CMC AI` 仍是最穩的逐幣主來源：`IP` 可直接抓到 `4/16 Confidential Data Rails testnet` 與 `4/11 Grayscale 候選名單`，`TRUMP` 可直接抓到 `4/25 Mar-a-Lago holder gala`，`ENS` 可抓到 `ENS Explorer` 與 `Trend Research` 約 `550 萬美元` 的持倉訊號。
+- `refx` 在 `26` 小時條件內命中 `4` 份，這次最有用的共同主線是 `中東停火 / 伊朗協議預期 -> 油價與通膨壓力緩和 -> 風險資產修復`，再疊加 `tokenization / stablecoin / ETF / 機構入口`。
+
+### 本次踩坑
+- 當清單2 只剩 `3` 檔時，不要為了形式硬補標的；應改成提高單檔敘事品質，並明講這是 `RSI 可視資料` 與熱門榜交叉後的實際結果。
+- `crypto.news` 與 `CoinGecko News` 今天對 `IP / ENS` 沒有穩定提供比 `CMC AI` 更新、更聚焦的逐幣催化；接受「外部新訊有限」本身就是結論。
+- `IP` 的 `Security Scan = --` 仍需明講「未標記不等於安全」；不要因為它通過本次過濾就暗示安全性已確認。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json`；若清單2 小於 `5` 檔，直接改成高密度報告，不要硬補滿。
+- `IP / ENS` 這類基礎設施幣優先補 `CMC AI / Community` 與市場背景；`TRUMP` 這類事件幣則優先確認活動日期、持幣條件與團隊錢包動向。
+- `refx` 若持續呈現 `風險資產修復 + tokenization / stablecoin` 主線，後續優先注意基礎設施與機構入口類標的，而不是純 meme 輪動。
