@@ -126,7 +126,7 @@
 - `GAS` 這種 ticker 容易混入無關 meme / 能源商品結果；若要保留，最好明確以 `Neo GAS` 或直接走 `CMC AI`。
 
 ### 下次優先順序
-- 先跑 automation 腳本生成 `.cache/daily-crypto-report/yyyyMMdd/target-list-2.json`，再針對清單2 逐檔補 `CMC AI`。
+- 先跑 automation 腳本生成 `target-list-2.json`，再針對清單2 逐檔補 `CMC AI`。
 - 有較強基本面的大中型幣先補 `crypto.news` 交叉驗證，例如 `LINK / AVAX / MNT`；沒有高可信新訊時接受「缺乏新催化」本身就是結論。
 - 若主工作樹 `E:\\work\\Crypto` 仍有 unrelated 變更，commit 時只 add `TrackingList_yyyyMMdd.md` 與必要的 `Recommand.md`，不要把其他檔一起送出。
 
@@ -193,7 +193,7 @@
 ### 本次踩坑
 - `CMC AI` 某些幣（例如 `BTC`）的 TLDR 區段不一定維持 `1. 2. 3.` 編號格式，若要自動抽 headline，不要只依賴固定 numbering。
 - `crypto.news` 與 `CoinGecko News` 今天對大多數清單2 標的仍然低命中，尤其 `DCR / GT / CVX / KCS / LIT` 這類中型或平台型資產，外部搜尋噪音仍比 `CMC AI / Community` 高。
-- 主工作樹 `E:\\work\\Crypto` 今天仍有 user 既有 `.gitignore` 修改，且有未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260406.md` 與 `Recommand.md`，不要把其他變更一起送出。
+- 主工作樹 `E:\\work\\Crypto` 今天仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260406.md` 與 `Recommand.md`，不要把其他變更一起送出。
 
 ### 下次優先順序
 - 先跑 automation 腳本生成 `target-list-2.json` 與 `cmc-ai.json`。
@@ -205,12 +205,12 @@
 ### 本次新增觀察
 - 今天沿用 `playwright-cli` + 共享 session `aiyoperps-auth` 與 persistent profile，直接在目前 worktree 落 `.cache/daily-crypto-report/20260407/`，可穩定抓到 `160` 筆 Trending、`60` 檔清單1、`14` 檔清單2。
 - 今天 `CMC AI` 對清單2 的 14 檔全部都能直接命中 `learn-faq` JSON；把 `LatestNews / PeopleSaying / Roadmap` 先抽成簡化 bullet，再寫報告，會比人工逐頁讀更穩。
-- `refx` 在 26 小時條件內命中 `4` 份，今天最有用的仍是共同主線，不是逐幣訊息：`BTC / ETH 機構敘事延續`、`穩定幣 / 支付 / 合規` 偏多、`DeFi / perp infra` 仍有安全折價、`伊朗 / 荷姆茲海峽 / 通膨` 讓大盤高波動。
+- `refx` 在 26 小時條件內命中 `4` 份，今天最有用的仍是共同主線，不是逐幣訊息：`BTC / ETH 機構敘事延續`、`穩定幣 / 支付 rails / 合規` 偏多、`DeFi / perp infra` 仍有安全折價、`伊朗 / 荷姆茲海峽 / 通膨` 讓大盤高波動。
 
 ### 本次踩坑
 - PowerShell 函式內不要把參數命名成 `$Args`；會和自動變數衝突，導致 `playwright-cli` 收到 `Unknown command: undefined`。
 - `CMC AI` 的 `PeopleSaying` 不一定有標準化價格位，且有些內容時間較舊；適合拿來補情緒或支撐/壓力，不適合直接當當日新催化。
-- 今天 `crypto.news / CoinGecko News` 對多數清單2 標的依舊沒有比 `CMC AI / CMC Community` 更高訊號的新增內容；若外部搜尋沒補強，就保留 `未見更強外部催化` 的寫法即可。
+- 今天 `crypto.news / CoinGecko News` 對多數清單2 標的依舊沒有比 `CMC AI / Community` 更高訊號的新增內容；若外部搜尋沒補強，就保留 `未見更強外部催化` 的寫法即可。
 
 ### 下次優先順序
 - 先用 Playwright 生成 `target-list-2.json`，再批量抽 `cmc-ai.json` 與 `coin-notes.json`。
@@ -373,3 +373,21 @@
 - 先跑 automation 腳本生成 `target-list-2.json`；若清單2 小於 `5` 檔，直接改成高密度報告，不要硬補滿。
 - `IP / ENS` 這類基礎設施幣優先補 `CMC AI / Community` 與市場背景；`TRUMP` 這類事件幣則優先確認活動日期、持幣條件與團隊錢包動向。
 - `refx` 若持續呈現 `風險資產修復 + tokenization / stablecoin` 主線，後續優先注意基礎設施與機構入口類標的，而不是純 meme 輪動。
+
+## 2026-04-18
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `162` 筆 Trending、`62` 檔清單1、`7` 檔清單2。
+- 今日清單2 回升到 `7` 檔，但仍不是適合硬補 `15` 檔的日子；應維持高密度報告，主體集中在 `IP / ETHFI / BNB / MX / HNT / GAS / BSV`。
+- `refx` 在 26 小時條件內命中 `3` 份，最有用的共同主線不再是單一停火利多，而是「Hormuz 風險溢價仍在」與「USDC Bridge / wXRP / USDT 流動 / DeFi TVL 回升」並存，代表市場同時交易宏觀風險與鏈上流動性改善。
+- `CMC AI` 仍是最穩的逐幣來源；今天對 `MX / IP / HNT / GAS / ETHFI / BSV / BNB` 全部都能直接命中 `learn-faq` JSON，其中時間最接近當日的訊號主要集中在 `IP / ETHFI / BNB / HNT`。
+
+### 本次踩坑
+- `CoinGecko News` 這次對這 7 檔依舊沒有穩定補出可直接引用的逐幣新訊，搜尋結果常回首頁、歷史頁或產業報告頁；若沒有新增高可信內容，應直接保留「未見更強外部催化」。
+- `crypto.news` 對今天這批標的大多只有較舊背景稿，只有 `IP / ETHFI` 勉強可作次級背景來源；不要把舊稿誤寫成當日新催化。
+- `Security Scan = --` 今天再次出現在 `IP / GAS / BSV / BNB`，報告內仍必須明講「未標記不等於安全」。
+
+### 下次優先順序
+- 先跑 automation 腳本生成 `target-list-2.json`；若清單2 低於 `8` 檔，就維持實際檔數，重點放在單檔事件線與市場背景密度。
+- 再先讀 `refx` 26 小時內檔案，判斷市場到底是偏 `宏觀風險殘留` 還是 `鏈上流動性改善` 主導，之後再決定優先追蹤高 beta 題材或平台/基建幣。
+- 對 `IP / ETHFI / BNB` 優先補 `CMC AI / Community`；`MX / HNT` 補平台或機構 watchlist 脈絡即可；`GAS / BSV` 若外部站沒有新訊，就接受它們更像反彈觀察組。
