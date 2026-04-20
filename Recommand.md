@@ -409,3 +409,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 再先讀 `refx` 26 小時內檔案，先判斷市場主線是否仍是 `宏觀風險 + BTC/穩定幣支撐` 的拉扯，或重新轉回全面 risk-on。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數真正命中的大幣） > `CoinGecko News`。
+
+## 2026-04-20
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `164` 筆 Trending、`61` 檔清單1、`8` 檔清單2。
+- 今日清單2 為 `BGB / MX / ASTER / HNT / ZEN / XMR / PENDLE / AR`；這次比前兩日更偏 `交易所 / 支付 rails / DePIN / 合規隱私計算`，而不是全面高 beta 反彈。
+- `CMC AI` 對清單2 的 `8` 檔全部可直接命中 `learn-faq` JSON；真正有額外補強價值的 `crypto.news` 只有少數幾檔，例如 `BGB` 的 `VIP Fast Track`、`ASTER` 的 `buyback / mainnet` 背景。`CoinGecko News` 對這批標的仍多數只回價格頁或泛用介紹。
+- `refx` 在 `26` 小時條件內命中 `4` 份；今天最有用的共同主線不是單純 risk-on，而是 `Hormuz / 伊朗 / 能源風險未退`、`Aave / rsETH` 壓抑 ETH / DeFi 信用層，同時 `交易所產品 / 穩定幣結算 / 支付基建` 仍偏多。
+
+### 本次踩坑
+- `CMC AI` 的最新消息雖然穩，但部分標的會混入較舊文章或分析文，例如 `AR / MX`；整理時要明確區分「近期事件」與「中期敘事」，不要把舊文包裝成當日新催化。
+- `BGB / XMR / AR` 今天都出現 `Security Scan = --`；報告內要繼續明講「未標記不等於安全」，避免讀者誤解成已通過安全檢查。
+- `CoinGecko News` 今天再次證明不適合批量逐幣當主來源；對這批清單2 幾乎沒有比 `CMC AI / Community` 更新、且更聚焦的內容。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 若清單2 低於 `10` 檔，就維持實際檔數，優先提高每檔事件線與市場背景密度，不要為了形式硬補滿 `15`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數真正命中的標的） > `CoinGecko News`。
