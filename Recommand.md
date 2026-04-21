@@ -427,3 +427,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 若清單2 低於 `10` 檔，就維持實際檔數，優先提高每檔事件線與市場背景密度，不要為了形式硬補滿 `15`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數真正命中的標的） > `CoinGecko News`。
+
+## 2026-04-21
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `161` 筆 Trending、`60` 檔清單1、`7` 檔清單2。
+- 今日清單2 為 `ASTER / LINK / RAY / BNB / ZEN / XRP / PENDLE`；整體偏 `perp DEX / RWA oracle / Solana DEX / 平台幣 / yield DeFi / XRP institutional rails`，不是全面 altseason。
+- `CMC AI` 對 7 檔全部可直接命中 `learn-faq` JSON，今天最有用的逐幣新訊是 `ASTER 15M users`、`LINK / KAIO / Tether tokenization`、`RAY / EURAU on Raydium`、`PENDLE real yield demand`、`XRP regulatory / triangle setup`。
+- `refx` 在 `26` 小時條件內命中 `20260420-18.md` 1 份；共同主線是 `BTC ETF / 加密基金流入偏多`、`CEX stablecoin 調度與 USDC loans`，但 `Kelp / rsETH / LayerZero` 事件仍壓抑 DeFi 風險偏好，`Hormuz / 伊朗 / 油價` 仍是宏觀波動源。
+
+### 本次踩坑
+- `CoinGecko News` 對今天這批標的仍大多回價格頁、歷史資料或舊研究文，不適合批量逐幣當主來源。
+- `crypto.news` 只有少數標的提供可用背景，且很多不是當日新聞；寫報告時要明確區分「近期背景」與「今日催化」。
+- `BNB / XRP` 今天的 `Security Scan = --`，仍需在報告明講「未標記不等於安全」。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再批量抽 `CMC AI learn-faq`，以 `latest news` 作主體、`people are saying` 只補情緒與支撐壓力。
+- 若 CoinGlass 仍無法穩定批量取值，清算區繼續用現價、近期支撐阻力、整數關卡與社群提及價位推估，並在報告明確標示。
