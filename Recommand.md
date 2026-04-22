@@ -445,3 +445,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 再批量抽 `CMC AI learn-faq`，以 `latest news` 作主體、`people are saying` 只補情緒與支撐壓力。
 - 若 CoinGlass 仍無法穩定批量取值，清算區繼續用現價、近期支撐阻力、整數關卡與社群提及價位推估，並在報告明確標示。
+
+## 2026-04-22
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`61` 檔清單1、`11` 檔清單2。
+- 今日清單2 為 `BCH / CVX / DASH / LTC / NEXO / RAY / BNB / LINK / NEAR / ZEN / PENDLE`；整體偏 `老牌支付鏈 / DeFi 收益 / RWA oracle / Solana DEX / BNB 生態 / AI 與隱私基建`，不是全面高 beta 題材。
+- `CMC AI` 對清單2 的 11 檔全部可直接命中 `learn-faq` JSON；逐幣主線以 `LINK RWA/KAIO/Tether`、`BNB burn + hard fork roadmap`、`PENDLE real yield / Boros / RWA pools`、`RAY wXRP / EURAU pools`、`LTC LitecoinVM / Coinbase UK collateral` 最有用。
+- `refx` 在 `26` 小時條件內命中 `20260421-15.md`、`20260421-21.md`、`20260422-07.md` 共 3 份；共同主線是 `BTC ETF / Strategy 持倉 / 機構配置` 支撐大型資產，但 `Warsh 利率訊號 / Iran-Hormuz / KelpDAO-Arbitrum-LayerZero exploit / NY AG 預測市場訴訟` 讓風險偏好分歧。
+
+### 本次踩坑
+- `crypto.news` 與 `CoinGecko News` 對今日 11 檔多數仍只回舊稿、價格頁、產業報告或非逐幣頁面；只有少數大型幣可作背景，不適合批量當主來源。
+- `CMC AI` 的社群段落可能混入舊技術分析或高波動價格喊單，報告主體仍應以 `latest news / roadmap` 為主，`people are saying` 只用來補支撐壓力與情緒。
+- 今日 `BCH / DASH / LTC / BNB / NEAR` 的 `Security Scan = --`；報告內仍需明講「未標記不等於安全」。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再批量抽 `CMC AI learn-faq`，優先寫 `latest news + roadmap`，社群段落只補情緒與支撐壓力。
+- 若外部站沒有比 `CMC AI / refx` 更聚焦的新訊，就不要硬湊新聞；直接標記為「未見更強外部催化」。
