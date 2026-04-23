@@ -463,3 +463,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 再批量抽 `CMC AI learn-faq`，優先寫 `latest news + roadmap`，社群段落只補情緒與支撐壓力。
 - 若外部站沒有比 `CMC AI / refx` 更聚焦的新訊，就不要硬湊新聞；直接標記為「未見更強外部催化」。
+
+## 2026-04-23
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `165` 筆 Trending、`62` 檔清單1、`8` 檔清單2。
+- 今日清單2 為 `RIVER / IP / BGB / BCH / NEXO / BNB / NEAR / ETH`；整體偏 `主流 ETH / 平台幣 / 支付鏈 / AI x IP / 高波動新幣`，不是全面山寨幣超跌。
+- `CMC AI` 對 8 檔全部可直接命中 `learn-faq` JSON；最有用的逐幣線索是 `BNB 4/28 Osaka/Mendel hard fork`、`BGB Morph payment accelerator + VIP Fast Track`、`NEXO U.S. compliance return`、`ETH Kelp DAO exploit vs long-term monetary thesis`。
+- `refx` 在 `26` 小時條件內命中 4 份；共同主線是 `BTC/ETH 反彈 + 機構流入`，但 `Hormuz/Iran 通膨風險` 與 `Kelp/Volo DeFi 安全事件` 讓高 beta altcoin 仍需保守。
+
+### 本次踩坑
+- `RIVER` 雖然 24H RSI 最低，但 CMC AI 明確提到 manipulation / supply concentration warning；低 RSI 不能自動解讀成安全抄底。
+- `CoinGecko News` 對今天 8 檔依舊大多回價格頁或泛資料，沒有比 `CMC AI / refx` 更聚焦的新訊。
+- 主工作樹 `E:\work\Crypto` 仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260423.md` 與 `Recommand.md`，不要把其他變更一起送出。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 若清單2 低於 `10` 檔，就維持實際檔數，優先提高每檔事件線與風險描述，不要硬補滿 15。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的標的） > `CoinGecko News`。
