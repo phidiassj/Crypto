@@ -481,3 +481,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 若清單2 低於 `10` 檔，就維持實際檔數，優先提高每檔事件線與風險描述，不要硬補滿 15。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的標的） > `CoinGecko News`。
+
+## 2026-04-24
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `165` 筆 Trending、`62` 檔清單1、`9` 檔清單2。
+- 今日清單2 為 `MNT / TAO / BGB / DASH / BCH / ENS / LTC / BNB / NEAR`；整體偏 `AI / 模組化 L2 / 平台幣 / 老牌支付鏈 / identity`，不是全面 altseason。
+- `CMC AI` 對 9 檔全部可直接命中 `learn-faq` JSON；今天最有用的逐幣線索是 `MNT AI hackathon + Bybit/USD1`、`TAO Grayscale 權重上升 + ETF 申請`、`BGB Morph payment accelerator + Cobo`、`BNB Binance.US 低費率 + 4/28 hard fork`、`NEAR AI-native execution vs Rhea exploit`。
+- `refx` 在 `26` 小時條件內命中 `20260423-07.md`、`20260423-13.md`、`20260423-19.md` 共 3 份；共同主線仍是 `Hormuz / Iran / 油價 / 美元` 壓制高 beta，但 `ETF / AI 半導體 / 支付 rails / 交易所生態` 仍提供風險資產底部支撐。
+
+### 本次踩坑
+- `crypto.news` 站內搜尋這次依舊低命中；即使以逐幣關鍵字查詢，回傳頁面也常缺少可穩定抽取的文章連結，不適合當批量主來源。
+- `CoinGecko News` 對今日 9 檔同樣沒有穩定補出比 `CMC AI / Community` 更聚焦的逐幣新訊；很多結果仍是價格頁、教學頁或泛市場內容。
+- `ENS` 這類標的即使 `Security Scan = Safe`，近期風險仍可能來自入口基礎設施而不是合約本身；報告不能把 `Security Scan` 直接等同全方位安全。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再批量抽 `CMC AI learn-faq`，主體優先寫 `latest news + roadmap`，社群段落只補情緒與支撐壓力。
+- 若 `crypto.news / CoinGecko News` 仍沒有更高品質逐幣內容，就直接保留「未見更強外部催化」的寫法，不要硬湊來源。
