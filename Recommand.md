@@ -499,3 +499,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 再批量抽 `CMC AI learn-faq`，主體優先寫 `latest news + roadmap`，社群段落只補情緒與支撐壓力。
 - 若 `crypto.news / CoinGecko News` 仍沒有更高品質逐幣內容，就直接保留「未見更強外部催化」的寫法，不要硬湊來源。
+
+## 2026-04-25
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `167` 筆 Trending、`64` 檔清單1、`7` 檔清單2。
+- 今日清單2 只剩 `LIT / BGB / LTC / EGLD / ORDI / ENS / APT` 七檔，代表今天不是全面超跌，而是少數具交易基建、平台、支付或 BTC 原生敘事的標的同時滿足 `價格門檻 + 安全條件 + RSI <= 60`。
+- `CMC AI` 對這 `7` 檔全部都能直接命中 `learn-faq` JSON；其中最有用的是 `LIT` 的 `RWA 流動性激勵 + EVM mainnet`、`BGB` 的 `Morph payment accelerator`、`APT` 的 `post-quantum / institutional infra`。
+- `refx` 在 `26` 小時條件內命中 `20260424-14.md`、`20260424-20.md` 共 `2` 份；這次最有用的共同主線是 `BTC ETF / 穩定幣流動性 / RWA 基建偏多`，但 `Hormuz / 伊朗 / 油氣 / 美元` 與 `KelpDAO / Aave` 修復線仍壓抑高 beta 風險偏好。
+
+### 本次踩坑
+- `crypto.news` 與 `CoinGecko News` 今天對這 `7` 檔仍然低命中；多數搜尋結果只回價格頁、歷史頁或舊稿，沒有比 `CMC AI / Community` 更近、更聚焦的逐幣催化。
+- `ORDI` 雖然量價較強，但 `24H RSI` 已接近上緣，不適合因「仍低於 60」就誤判為低風險超跌。
+- `BGB / LTC / EGLD / ORDI / APT` 今天的 `Security Scan = --`；報告內仍要持續明講「未標記不等於安全」。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 若清單2 低於 `8` 檔，就維持實際檔數，優先提高每檔事件線與清算帶估算密度，不要為了形式硬補滿 `15`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的標的） > `CoinGecko News`。
