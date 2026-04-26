@@ -5,6 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$script:SessionName = $SessionName
 
 $CliScript = 'C:\Users\phidi\.codex\skills\playwright\scripts\playwright_cli.sh'
 $OutputDate = Get-Date -Format 'yyyyMMdd'
@@ -21,13 +22,30 @@ function Invoke-PlaywrightCli {
         "'" + ($_ -replace "'", "'\\''") + "'"
     }
     $bashCli = $CliScript.Replace('\', '/').Replace('C:', '/mnt/c')
-    $cmd = "PLAYWRIGHT_CLI_SESSION=$SessionName `"$bashCli`" $($quotedArgs -join ' ')"
+    $cmd = "PLAYWRIGHT_CLI_SESSION=$script:SessionName `"$bashCli`" $($quotedArgs -join ' ')"
     return bash -lc $cmd
 }
 
 function Ensure-Session {
     $listOutput = Invoke-PlaywrightCli -Arguments @('list')
-    if ($listOutput -notmatch [Regex]::Escape($SessionName)) {
+    $currentSession = $null
+    foreach ($line in ($listOutput -split "`r?`n")) {
+        if ($line -match '^- ([^:]+):$') {
+            $currentSession = $Matches[1]
+            continue
+        }
+
+        if (
+            $currentSession -and
+            $line -match '^\s+- user-data-dir:\s+(.+)$' -and
+            $Matches[1].Trim() -eq $ProfilePath
+        ) {
+            $script:SessionName = $currentSession
+            return
+        }
+    }
+
+    if ($listOutput -notmatch [Regex]::Escape($script:SessionName)) {
         Invoke-PlaywrightCli -Arguments @(
             'open',
             'about:blank',

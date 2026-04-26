@@ -517,3 +517,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 若清單2 低於 `8` 檔，就維持實際檔數，優先提高每檔事件線與清算帶估算密度，不要為了形式硬補滿 `15`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的標的） > `CoinGecko News`。
+
+## 2026-04-26
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`60` 檔清單1、`7` 檔清單2。
+- 今日清單2 為 `RIVER / MNT / IP / BGB / LPT / XMR / EGLD`；整體偏 `資料/支付層 + 模組化 L2 + 交易所支付 rails + 隱私幣 + AI 視訊基建`，不是全面 risk-on。
+- `refx` 在 `26` 小時條件內只命中 `20260425-13.md` 1 份；最有用的共同主線是 `BTC / ETH / XRP ETF 仍有淨流入`，但監管、治安、制裁與油價風險同步升高，因此資金更偏向可解釋、流動性較深的資產。
+- 今天把 automation 腳本補上「重用已開啟同 profile Playwright session」的邏輯；若專用 profile 已有 `default` session 開著，不需要再硬開第二個 browser instance。
+
+### 本次踩坑
+- 專用 profile `E:\work\browser-profiles\x-playwright` 若已被 Playwright 既有 session 佔用，舊版腳本會報 `Browser is already in use`，接著又因 session 名稱不一致而失敗；必須先從 `playwright-cli list` 找到同 profile 的既有 session 再重用。
+- `crypto.news` 與 `CoinGecko News` 今天對 `RIVER / MNT / IP / BGB / LPT / XMR / EGLD` 仍然低命中；多數結果只回舊稿、價格頁或泛標籤頁，不適合批量逐幣當主來源。
+- `RIVER` 雖然今天 `24H RSI` 最低，但 CMC AI 與社群都明確提到 manipulation / supply concentration 風險；低 RSI 不能直接當抄底信號。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`；若 profile 已有 Playwright session，直接重用即可。
+- 若清單2 仍低於 `8` 檔，就維持實際檔數，優先提高每檔事件線與風險描述，不要為了形式硬補滿 `15`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數真正命中的大型或熱門標的） > `CoinGecko News`。
