@@ -535,3 +535,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`；若 profile 已有 Playwright session，直接重用即可。
 - 若清單2 仍低於 `8` 檔，就維持實際檔數，優先提高每檔事件線與風險描述，不要為了形式硬補滿 `15`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補少數真正命中的大型或熱門標的） > `CoinGecko News`。
+
+## 2026-04-27
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`62` 檔清單1、`11` 檔清單2。
+- `refx` 在 `26` 小時條件內命中 `4` 份；今天最清楚的共同主線是 `美伊談判停滯 / 油價上跳 / 美股期貨受壓`，但 `BTC conference / CLARITY Act / stablecoin payments` 仍支撐大型資產與合規基建敘事。
+- `CMC AI learn-faq` 對今天 11 檔全部可直接命中；最有用的逐幣線索是 `AAVE rsETH 壞帳與補洞`、`LINK tokenization + AWS`、`APT quantum-ready + DeFi 規則倡議`、`ETH RLUSD cross-chain + 基金會 unstake`、`PENDLE Boros / AI agent / RWA pools`。
+- `crypto.news / CoinGecko News` 這次只有少數大題材有實質補強，例如 `Aptos RWA integration`、`Hyperliquid perps wallet integration`、`Pendle institutional yield`；對 `GAS / NEXO / BGB / CAKE` 這類標的大多仍低命中，沒有比 CMC AI / Community 更近的逐幣催化。
+
+### 本次踩坑
+- `GAS` 這種 ticker 在一般搜尋很容易被能源商品或舊稿污染；若外部站沒有穩定命中，直接回到 `CMC AI + Neo 治理事件` 會比較乾淨。
+- `HYPE`、`ETH` 這類大幣雖然還在 `24H RSI <= 60` 名單內，但實際上已接近上緣，報告裡要明確寫成「趨勢強 / headline risk 高」，不是低位超跌組。
+- 主工作樹 `E:\\work\\Crypto` 仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260427.md` 與 `Recommand.md`，不要把其他變更一起送出。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`，再批量抽 `cmc-ai.json`。
+- 先讀 `refx` 26 小時內檔案，優先判斷宏觀是 `risk-off + 油價` 主導，還是 `BTC conference / 立法 / 穩定幣` 主導，再決定報告重心。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的題材大幣） > `CoinGecko News`。
