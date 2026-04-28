@@ -1,0 +1,753 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Go to homepage" [ref=e12] [cursor=pointer]:
+            - /url: /
+            - img [ref=e13]
+          - generic [ref=e18]:
+            - link "Cryptocurrencies" [ref=e20] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e21]: Cryptocurrencies
+            - link "Dashboards" [ref=e23] [cursor=pointer]:
+              - /url: /charts/
+              - generic [ref=e24]: Dashboards
+            - link "DexScan" [ref=e26] [cursor=pointer]:
+              - /url: https://dex.coinmarketcap.com/token/all/
+              - generic [ref=e27]: DexScan
+            - link "Exchanges" [ref=e29] [cursor=pointer]:
+              - /url: /rankings/exchanges/
+              - generic [ref=e30]: Exchanges
+            - link "Community" [ref=e32] [cursor=pointer]:
+              - /url: /community/
+              - generic [ref=e33]: Community
+            - generic [ref=e35] [cursor=pointer]: Products
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - link "Portfolio" [ref=e38] [cursor=pointer]:
+              - /url: //coinmarketcap.com/portfolio-tracker/
+              - generic [ref=e39]:
+                - img [ref=e41]
+                - generic [ref=e43]: Portfolio
+            - link "Watchlist" [ref=e45] [cursor=pointer]:
+              - /url: //coinmarketcap.com/?tableRankBy=watchlist
+              - generic [ref=e46]:
+                - img [ref=e48]
+                - generic [ref=e50]: Watchlist
+          - generic [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e55]: Search
+            - generic [ref=e57]: /
+          - img [ref=e60] [cursor=pointer]
+          - generic [ref=e64] [cursor=pointer]:
+            - img [ref=e65]
+            - img [ref=e69]
+      - generic [ref=e73]:
+        - generic "Scrollable content area" [ref=e74]:
+          - list [ref=e79]:
+            - listitem [ref=e80] [cursor=pointer]:
+              - generic [ref=e82]: Top
+            - listitem [ref=e83] [cursor=pointer]:
+              - generic [ref=e85]: Trending
+            - listitem [ref=e86] [cursor=pointer]:
+              - generic [ref=e88]: Watchlist
+            - listitem [ref=e89] [cursor=pointer]:
+              - link "Prediction Markets" [ref=e92]:
+                - /url: /prediction-markets/
+                - generic [ref=e93]: Prediction Markets
+            - listitem [ref=e95] [cursor=pointer]:
+              - generic [ref=e97]: Most Visited
+            - listitem [ref=e98] [cursor=pointer]:
+              - generic [ref=e101]: New
+            - listitem [ref=e102] [cursor=pointer]:
+              - generic [ref=e106]:
+                - text: More
+                - img [ref=e108]
+        - generic "Scrollable content area" [ref=e111]:
+          - generic [ref=e114]:
+            - link "Market Cap $2.51T 0.67%" [ref=e115] [cursor=pointer]:
+              - /url: /charts/
+              - generic [ref=e117]:
+                - generic [ref=e118]: Market Cap
+                - img [ref=e119]
+              - generic [ref=e122]:
+                - generic [ref=e123]: $2.51T
+                - paragraph [ref=e125]:
+                  - img [ref=e126]
+                  - text: 0.67%
+            - link "CMC20 $152.19 0.59%" [ref=e129] [cursor=pointer]:
+              - /url: /charts/cmc20/
+              - generic [ref=e131]:
+                - generic [ref=e132]: CMC20
+                - img [ref=e133]
+              - generic [ref=e136]:
+                - generic [ref=e137]: $152.19
+                - paragraph [ref=e139]:
+                  - img [ref=e140]
+                  - text: 0.59%
+            - link "Fear & Greed 53 Neutral" [ref=e143] [cursor=pointer]:
+              - /url: /charts/fear-and-greed-index/
+              - generic [ref=e145]:
+                - generic [ref=e146]: Fear & Greed
+                - img [ref=e147]
+              - generic [ref=e153]:
+                - img [ref=e154]
+                - generic [ref=e166]:
+                  - generic [ref=e167]: "53"
+                  - generic [ref=e168]: Neutral
+            - link "Altcoin Season 34 /100 Bitcoin Altcoin" [ref=e169] [cursor=pointer]:
+              - /url: /charts/altcoin-season-index/
+              - generic [ref=e171]:
+                - generic [ref=e172]: Altcoin Season
+                - img [ref=e173]
+              - generic [ref=e177]:
+                - generic [ref=e179]:
+                  - generic [ref=e180]: "34"
+                  - generic [ref=e181]: /100
+                - generic [ref=e183]:
+                  - generic [ref=e184]: Bitcoin
+                  - generic [ref=e185]: Altcoin
+        - generic [ref=e199]:
+          - generic:
+            - generic:
+              - img
+          - generic [ref=e201]:
+            - generic [ref=e203] [cursor=pointer]:
+              - generic [ref=e206]: Topic
+              - generic [ref=e207]: 187M into ETH, 325M out of BTC ETFs 👀
+            - generic [ref=e211] [cursor=pointer]:
+              - img [ref=e213]
+              - generic [ref=e215]: Add AI alert
+              - img [ref=e217]
+            - generic [ref=e220] [cursor=pointer]:
+              - img [ref=e222]
+              - generic [ref=e225]: Why is the market down today?
+            - generic [ref=e227] [cursor=pointer]:
+              - img [ref=e229]
+              - generic [ref=e232]: Are altcoins outperforming Bitcoin?
+            - generic [ref=e234] [cursor=pointer]:
+              - img [ref=e236]
+              - generic [ref=e239]: What are the trending narratives?
+            - generic [ref=e241] [cursor=pointer]:
+              - img [ref=e243]
+              - generic [ref=e246]: What cryptos are showing bullish momentum?
+            - generic [ref=e248] [cursor=pointer]:
+              - img [ref=e250]
+              - generic [ref=e253]: What upcoming events may impact crypto?
+            - generic [ref=e255] [cursor=pointer]:
+              - img [ref=e257]
+              - generic [ref=e260]: What is the market sentiment?
+            - generic [ref=e262] [cursor=pointer]:
+              - img [ref=e264]
+              - generic [ref=e267]: What are KOLs discussing?
+          - img [ref=e270]
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e274]:
+              - generic [ref=e276] [cursor=pointer]:
+                - img [ref=e277]
+                - text: All
+              - generic [ref=e278] [cursor=pointer]:
+                - generic [ref=e279]:
+                  - img [ref=e280]
+                  - text: Top 200
+                - list [ref=e285]:
+                  - listitem [ref=e286]:
+                    - heading "1h" [level=5] [ref=e289]
+                  - listitem [ref=e290]:
+                    - heading "4h" [level=5] [ref=e293]
+                  - listitem [ref=e294]:
+                    - heading "24h" [level=5] [ref=e297]
+              - generic [ref=e299] [cursor=pointer]:
+                - img [ref=e300]
+                - text: Most Traded On-Chain
+            - generic [ref=e304]:
+              - generic [ref=e306] [cursor=pointer]:
+                - img [ref=e307]
+                - generic [ref=e309]: Market Cap
+              - generic [ref=e311] [cursor=pointer]:
+                - img [ref=e312]
+                - generic [ref=e314]: Volume (24h)
+              - generic [ref=e316] [cursor=pointer]:
+                - img [ref=e317]
+                - generic [ref=e319]: Boost
+              - generic [ref=e320]:
+                - generic [ref=e321]: About Trending
+                - img [ref=e323]
+              - button [ref=e325]
+              - button "Filters" [ref=e328]:
+                - generic [ref=e329]:
+                  - img [ref=e331]
+                  - generic [ref=e333]: Filters
+          - generic [ref=e337]:
+            - banner [ref=e338]:
+              - table [ref=e339]:
+                - rowgroup [ref=e340]:
+                  - row "# Name Price 1h % 24h % Market Cap Volume (24h) DEX Liquidity Age DEX Txns (24h) Security Scan" [ref=e341]:
+                    - columnheader [ref=e342]
+                    - columnheader "#" [ref=e343]:
+                      - generic [ref=e344]: "#"
+                    - columnheader "Name" [ref=e345]:
+                      - generic [ref=e346]: Name
+                    - columnheader "Price" [ref=e347]:
+                      - generic [ref=e348]:
+                        - text: Price
+                        - generic [ref=e349]:
+                          - img [ref=e350]
+                          - img [ref=e351]
+                    - columnheader "1h %" [ref=e352]:
+                      - generic [ref=e353]:
+                        - text: 1h %
+                        - generic [ref=e354]:
+                          - img [ref=e355]
+                          - img [ref=e356]
+                    - columnheader "24h %" [ref=e357]:
+                      - generic [ref=e358]:
+                        - text: 24h %
+                        - generic [ref=e359]:
+                          - img [ref=e360]
+                          - img [ref=e361]
+                    - columnheader "Market Cap" [ref=e362]:
+                      - generic [ref=e363]:
+                        - text: Market Cap
+                        - generic [ref=e364]:
+                          - img [ref=e365]
+                          - img [ref=e366]
+                    - columnheader "Volume (24h)" [ref=e367]:
+                      - generic [ref=e368]:
+                        - text: Volume (24h)
+                        - generic [ref=e369]:
+                          - img [ref=e370]
+                          - img [ref=e371]
+                    - columnheader "DEX Liquidity" [ref=e372]:
+                      - generic [ref=e373]:
+                        - text: DEX Liquidity
+                        - generic [ref=e374]:
+                          - img [ref=e375]
+                          - img [ref=e376]
+                    - columnheader "Age" [ref=e377]:
+                      - generic [ref=e378]:
+                        - text: Age
+                        - generic [ref=e379]:
+                          - img [ref=e380]
+                          - img [ref=e381]
+                    - columnheader "DEX Txns (24h)" [ref=e382]:
+                      - generic [ref=e383]:
+                        - text: DEX Txns (24h)
+                        - generic [ref=e384]:
+                          - img [ref=e385]
+                          - img [ref=e386]
+                    - columnheader "Security Scan" [ref=e387]:
+                      - generic [ref=e388]: Security Scan
+            - table [ref=e390]:
+              - rowgroup:
+                - row:
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+                  - columnheader
+              - rowgroup [ref=e391]:
+                - row [ref=e392] [cursor=pointer]:
+                  - cell [ref=e393]
+                  - cell [ref=e396]
+                  - cell [ref=e399]
+                  - cell [ref=e402]
+                  - cell [ref=e405]
+                  - cell [ref=e408]
+                  - cell [ref=e411]
+                  - cell [ref=e414]
+                  - cell [ref=e417]
+                  - cell [ref=e420]
+                  - cell [ref=e423]
+                  - cell [ref=e426]
+                - row [ref=e429] [cursor=pointer]:
+                  - cell [ref=e430]
+                  - cell [ref=e433]
+                  - cell [ref=e436]
+                  - cell [ref=e439]
+                  - cell [ref=e442]
+                  - cell [ref=e445]
+                  - cell [ref=e448]
+                  - cell [ref=e451]
+                  - cell [ref=e454]
+                  - cell [ref=e457]
+                  - cell [ref=e460]
+                  - cell [ref=e463]
+                - row [ref=e466] [cursor=pointer]:
+                  - cell [ref=e467]
+                  - cell [ref=e470]
+                  - cell [ref=e473]
+                  - cell [ref=e476]
+                  - cell [ref=e479]
+                  - cell [ref=e482]
+                  - cell [ref=e485]
+                  - cell [ref=e488]
+                  - cell [ref=e491]
+                  - cell [ref=e494]
+                  - cell [ref=e497]
+                  - cell [ref=e500]
+                - row [ref=e503] [cursor=pointer]:
+                  - cell [ref=e504]
+                  - cell [ref=e507]
+                  - cell [ref=e510]
+                  - cell [ref=e513]
+                  - cell [ref=e516]
+                  - cell [ref=e519]
+                  - cell [ref=e522]
+                  - cell [ref=e525]
+                  - cell [ref=e528]
+                  - cell [ref=e531]
+                  - cell [ref=e534]
+                  - cell [ref=e537]
+                - row [ref=e540] [cursor=pointer]:
+                  - cell [ref=e541]
+                  - cell [ref=e544]
+                  - cell [ref=e547]
+                  - cell [ref=e550]
+                  - cell [ref=e553]
+                  - cell [ref=e556]
+                  - cell [ref=e559]
+                  - cell [ref=e562]
+                  - cell [ref=e565]
+                  - cell [ref=e568]
+                  - cell [ref=e571]
+                  - cell [ref=e574]
+                - row [ref=e577] [cursor=pointer]:
+                  - cell [ref=e578]
+                  - cell [ref=e581]
+                  - cell [ref=e584]
+                  - cell [ref=e587]
+                  - cell [ref=e590]
+                  - cell [ref=e593]
+                  - cell [ref=e596]
+                  - cell [ref=e599]
+                  - cell [ref=e602]
+                  - cell [ref=e605]
+                  - cell [ref=e608]
+                  - cell [ref=e611]
+                - row [ref=e614] [cursor=pointer]:
+                  - cell [ref=e615]
+                  - cell [ref=e618]
+                  - cell [ref=e621]
+                  - cell [ref=e624]
+                  - cell [ref=e627]
+                  - cell [ref=e630]
+                  - cell [ref=e633]
+                  - cell [ref=e636]
+                  - cell [ref=e639]
+                  - cell [ref=e642]
+                  - cell [ref=e645]
+                  - cell [ref=e648]
+                - row [ref=e651] [cursor=pointer]:
+                  - cell [ref=e652]
+                  - cell [ref=e655]
+                  - cell [ref=e658]
+                  - cell [ref=e661]
+                  - cell [ref=e664]
+                  - cell [ref=e667]
+                  - cell [ref=e670]
+                  - cell [ref=e673]
+                  - cell [ref=e676]
+                  - cell [ref=e679]
+                  - cell [ref=e682]
+                  - cell [ref=e685]
+                - row [ref=e688] [cursor=pointer]:
+                  - cell [ref=e689]
+                  - cell [ref=e692]
+                  - cell [ref=e695]
+                  - cell [ref=e698]
+                  - cell [ref=e701]
+                  - cell [ref=e704]
+                  - cell [ref=e707]
+                  - cell [ref=e710]
+                  - cell [ref=e713]
+                  - cell [ref=e716]
+                  - cell [ref=e719]
+                  - cell [ref=e722]
+                - row [ref=e725] [cursor=pointer]:
+                  - cell [ref=e726]
+                  - cell [ref=e729]
+                  - cell [ref=e732]
+                  - cell [ref=e735]
+                  - cell [ref=e738]
+                  - cell [ref=e741]
+                  - cell [ref=e744]
+                  - cell [ref=e747]
+                  - cell [ref=e750]
+                  - cell [ref=e753]
+                  - cell [ref=e756]
+                  - cell [ref=e759]
+                - row [ref=e762] [cursor=pointer]:
+                  - cell [ref=e763]
+                  - cell [ref=e766]
+                  - cell [ref=e769]
+                  - cell [ref=e772]
+                  - cell [ref=e775]
+                  - cell [ref=e778]
+                  - cell [ref=e781]
+                  - cell [ref=e784]
+                  - cell [ref=e787]
+                  - cell [ref=e790]
+                  - cell [ref=e793]
+                  - cell [ref=e796]
+                - row [ref=e799] [cursor=pointer]:
+                  - cell [ref=e800]
+                  - cell [ref=e803]
+                  - cell [ref=e806]
+                  - cell [ref=e809]
+                  - cell [ref=e812]
+                  - cell [ref=e815]
+                  - cell [ref=e818]
+                  - cell [ref=e821]
+                  - cell [ref=e824]
+                  - cell [ref=e827]
+                  - cell [ref=e830]
+                  - cell [ref=e833]
+                - row [ref=e836] [cursor=pointer]:
+                  - cell [ref=e837]
+                  - cell [ref=e840]
+                  - cell [ref=e843]
+                  - cell [ref=e846]
+                  - cell [ref=e849]
+                  - cell [ref=e852]
+                  - cell [ref=e855]
+                  - cell [ref=e858]
+                  - cell [ref=e861]
+                  - cell [ref=e864]
+                  - cell [ref=e867]
+                  - cell [ref=e870]
+                - row [ref=e873] [cursor=pointer]:
+                  - cell [ref=e874]
+                  - cell [ref=e877]
+                  - cell [ref=e880]
+                  - cell [ref=e883]
+                  - cell [ref=e886]
+                  - cell [ref=e889]
+                  - cell [ref=e892]
+                  - cell [ref=e895]
+                  - cell [ref=e898]
+                  - cell [ref=e901]
+                  - cell [ref=e904]
+                  - cell [ref=e907]
+                - row [ref=e910] [cursor=pointer]:
+                  - cell [ref=e911]
+                  - cell [ref=e914]
+                  - cell [ref=e917]
+                  - cell [ref=e920]
+                  - cell [ref=e923]
+                  - cell [ref=e926]
+                  - cell [ref=e929]
+                  - cell [ref=e932]
+                  - cell [ref=e935]
+                  - cell [ref=e938]
+                  - cell [ref=e941]
+                  - cell [ref=e944]
+                - row [ref=e947] [cursor=pointer]:
+                  - cell [ref=e948]
+                  - cell [ref=e951]
+                  - cell [ref=e954]
+                  - cell [ref=e957]
+                  - cell [ref=e960]
+                  - cell [ref=e963]
+                  - cell [ref=e966]
+                  - cell [ref=e969]
+                  - cell [ref=e972]
+                  - cell [ref=e975]
+                  - cell [ref=e978]
+                  - cell [ref=e981]
+                - row [ref=e984] [cursor=pointer]:
+                  - cell [ref=e985]
+                  - cell [ref=e988]
+                  - cell [ref=e991]
+                  - cell [ref=e994]
+                  - cell [ref=e997]
+                  - cell [ref=e1000]
+                  - cell [ref=e1003]
+                  - cell [ref=e1006]
+                  - cell [ref=e1009]
+                  - cell [ref=e1012]
+                  - cell [ref=e1015]
+                  - cell [ref=e1018]
+                - row [ref=e1021] [cursor=pointer]:
+                  - cell [ref=e1022]
+                  - cell [ref=e1025]
+                  - cell [ref=e1028]
+                  - cell [ref=e1031]
+                  - cell [ref=e1034]
+                  - cell [ref=e1037]
+                  - cell [ref=e1040]
+                  - cell [ref=e1043]
+                  - cell [ref=e1046]
+                  - cell [ref=e1049]
+                  - cell [ref=e1052]
+                  - cell [ref=e1055]
+                - row [ref=e1058] [cursor=pointer]:
+                  - cell [ref=e1059]
+                  - cell [ref=e1062]
+                  - cell [ref=e1065]
+                  - cell [ref=e1068]
+                  - cell [ref=e1071]
+                  - cell [ref=e1074]
+                  - cell [ref=e1077]
+                  - cell [ref=e1080]
+                  - cell [ref=e1083]
+                  - cell [ref=e1086]
+                  - cell [ref=e1089]
+                  - cell [ref=e1092]
+                - row [ref=e1095] [cursor=pointer]:
+                  - cell [ref=e1096]
+                  - cell [ref=e1099]
+                  - cell [ref=e1102]
+                  - cell [ref=e1105]
+                  - cell [ref=e1108]
+                  - cell [ref=e1111]
+                  - cell [ref=e1114]
+                  - cell [ref=e1117]
+                  - cell [ref=e1120]
+                  - cell [ref=e1123]
+                  - cell [ref=e1126]
+                  - cell [ref=e1129]
+        - generic [ref=e1136]:
+          - heading "Today's Cryptocurrency Prices by Market Cap" [level=1] [ref=e1137]
+          - generic [ref=e1138]:
+            - paragraph [ref=e1140]:
+              - text: The global crypto market cap is $2.51T, a
+              - generic [ref=e1141]:
+                - generic [ref=e1142]: H
+                - text: 0.68%
+              - text: decrease over the last day.
+            - text: K K
+            - generic [ref=e1143] [cursor=pointer]: Read More
+    - generic [ref=e1148]:
+      - generic [ref=e1150]:
+        - generic [ref=e1151]:
+          - generic [ref=e1152]: Stay on top of crypto. All the time, any time.
+          - generic [ref=e1153]: Please keep me updated by email with the latest crypto news, research findings, reward programs, event updates, coin listings and more information from CoinMarketCap.
+        - generic [ref=e1155]:
+          - textbox "Enter your e-mail address" [ref=e1160]
+          - button "Submit" [ref=e1162]:
+            - generic [ref=e1164]: Submit
+      - img [ref=e1166]
+    - generic [ref=e1168]:
+      - generic:
+        - generic [ref=e1171]:
+          - generic:
+            - generic [ref=e1172]:
+              - generic [ref=e1173]: Products
+              - list [ref=e1174]:
+                - listitem [ref=e1175]:
+                  - link "Academy" [ref=e1176] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/academy/
+                - listitem [ref=e1177]:
+                  - link "Advertise" [ref=e1178] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/events/advertise/
+                - listitem [ref=e1179]:
+                  - link "CMC Labs" [ref=e1180] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/events/cmc-labs/
+                - listitem [ref=e1181]:
+                  - link "CMC Max" [ref=e1182] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/products/cmc-max/
+                - listitem [ref=e1183]:
+                  - link "Top Stories" [ref=e1184] [cursor=pointer]:
+                    - /url: /top-stories/
+                - listitem [ref=e1185]:
+                  - link "CMC Updates" [ref=e1186] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/community/profile/cmc_product_update/
+                - listitem [ref=e1187]:
+                  - link "Bitcoin ETFs" [ref=e1188] [cursor=pointer]:
+                    - /url: /etf/bitcoin/
+                - listitem [ref=e1189]:
+                  - link "Crypto API" [ref=e1190] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/api/
+                - listitem [ref=e1191]:
+                  - link "DexScan" [ref=e1192] [cursor=pointer]:
+                    - /url: https://dex.coinmarketcap.com/networks/ethereum/
+                - listitem [ref=e1193]:
+                  - link "Real-World Assets" [ref=e1194] [cursor=pointer]:
+                    - /url: /real-world-assets/
+                - listitem [ref=e1195]:
+                  - link "Global Charts" [ref=e1196] [cursor=pointer]:
+                    - /url: /charts/
+                - listitem [ref=e1197]:
+                  - link "NFT" [ref=e1198] [cursor=pointer]:
+                    - /url: /nft/
+                - listitem [ref=e1199]:
+                  - link "Portfolio" [ref=e1200] [cursor=pointer]:
+                    - /url: /portfolio-tracker/
+                - listitem [ref=e1201]:
+                  - link "Watchlist" [ref=e1202] [cursor=pointer]:
+                    - /url: /watchlist/
+                - listitem [ref=e1203]:
+                  - link "Doodles" [ref=e1204] [cursor=pointer]:
+                    - /url: /doodles/
+                - listitem [ref=e1205]:
+                  - link "Sitemap" [ref=e1206] [cursor=pointer]:
+                    - /url: /sitemap/currencies/
+            - generic [ref=e1207]:
+              - generic [ref=e1208]: Company
+              - list [ref=e1209]:
+                - listitem [ref=e1210]:
+                  - link "About us" [ref=e1211] [cursor=pointer]:
+                    - /url: /about/
+                - listitem [ref=e1212]:
+                  - link "Terms of use" [ref=e1213] [cursor=pointer]:
+                    - /url: /terms/
+                - listitem [ref=e1214]:
+                  - link "Privacy Policy" [ref=e1215] [cursor=pointer]:
+                    - /url: /privacy/
+                - listitem [ref=e1216]: Cookie preferences
+                - listitem [ref=e1217]:
+                  - link "Cookie policy" [ref=e1218] [cursor=pointer]:
+                    - /url: /cookie-policy/
+                - listitem [ref=e1219]:
+                  - link "Community Rules" [ref=e1220] [cursor=pointer]:
+                    - /url: https://support.coinmarketcap.com/hc/en-us/articles/4412939497755/
+                - listitem [ref=e1221]:
+                  - link "Disclaimer" [ref=e1222] [cursor=pointer]:
+                    - /url: /disclaimer/
+                - listitem [ref=e1223]:
+                  - link "Methodology" [ref=e1224] [cursor=pointer]:
+                    - /url: /methodology/
+                - listitem [ref=e1225]:
+                  - link "Careers" [ref=e1226] [cursor=pointer]:
+                    - /url: /jobs/
+                  - generic [ref=e1227]: We’re hiring!
+          - generic:
+            - generic [ref=e1228]:
+              - generic [ref=e1229]: Support
+              - list [ref=e1230]:
+                - listitem [ref=e1231]:
+                  - link "Get Listed" [ref=e1232] [cursor=pointer]:
+                    - /url: https://support.coinmarketcap.com/hc/en-us/requests/new?ticket_form_id=360000493112
+                - listitem [ref=e1233]:
+                  - link "Request Form" [ref=e1234] [cursor=pointer]:
+                    - /url: /request/
+                - listitem [ref=e1235]:
+                  - link "Contact Support" [ref=e1236] [cursor=pointer]:
+                    - /url: https://support-chat.coinmarketcap.com/
+                - listitem [ref=e1237]:
+                  - link "FAQ" [ref=e1238] [cursor=pointer]:
+                    - /url: /faq/
+                - listitem [ref=e1239]:
+                  - link "Glossary" [ref=e1240] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/academy/glossary
+            - generic [ref=e1241]:
+              - generic [ref=e1242]: Socials
+              - list [ref=e1243]:
+                - listitem [ref=e1244]:
+                  - link "X (Twitter)" [ref=e1245] [cursor=pointer]:
+                    - /url: https://twitter.com/CoinMarketCap
+                - listitem [ref=e1246]:
+                  - link "Community" [ref=e1247] [cursor=pointer]:
+                    - /url: https://coinmarketcap.com/community/profile/CoinMarketCap/
+                - listitem [ref=e1248]:
+                  - link "Telegram" [ref=e1249] [cursor=pointer]:
+                    - /url: https://t.me/CoinMarketCapAnnouncements
+                - listitem [ref=e1250]:
+                  - link "Instagram" [ref=e1251] [cursor=pointer]:
+                    - /url: https://www.instagram.com/coinmarketcap/
+                - listitem [ref=e1252]:
+                  - link "Facebook" [ref=e1253] [cursor=pointer]:
+                    - /url: https://www.facebook.com/CoinMarketCap
+                - listitem [ref=e1254]:
+                  - link "Reddit" [ref=e1255] [cursor=pointer]:
+                    - /url: https://www.reddit.com/r/CoinMarketCap/
+                - listitem [ref=e1256]:
+                  - link "LinkedIn" [ref=e1257] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/company/coinmarketcap/
+        - generic [ref=e1258]:
+          - generic [ref=e1259]: © 2026 CoinMarketCap. All rights reserved
+          - generic [ref=e1260]:
+            - link:
+              - /url: https://itunes.apple.com/app/coinmarketcap/id1282107098/?ls=1&mt=8
+            - link:
+              - /url: https://play.google.com/store/apps/details/?id=com.coinmarketcap.android&hl=en_US
+    - generic [ref=e1261]:
+      - generic [ref=e1262]:
+        - generic [ref=e1263]:
+          - generic [ref=e1264]: "Cryptos:"
+          - link "48.72M" [ref=e1265] [cursor=pointer]:
+            - /url: /charts/number-of-cryptocurrencies-tracked/
+        - generic [ref=e1266]:
+          - generic [ref=e1267]: "Exchanges:"
+          - link "935" [ref=e1268] [cursor=pointer]:
+            - /url: /rankings/exchanges/
+        - generic [ref=e1269]:
+          - generic [ref=e1270]: "Market Cap:"
+          - generic [ref=e1271]:
+            - link "$2.51T" [ref=e1272] [cursor=pointer]:
+              - /url: /charts/
+            - generic [ref=e1273]:
+              - img [ref=e1274]
+              - text: 0.68%
+        - generic [ref=e1276]:
+          - generic [ref=e1277]: "24h Vol:"
+          - generic [ref=e1278]:
+            - link "$154.27B" [ref=e1279] [cursor=pointer]:
+              - /url: /charts/
+            - generic [ref=e1280]:
+              - img [ref=e1281]
+              - text: 32.46%
+        - generic [ref=e1283]:
+          - generic [ref=e1284]: "Dominance:"
+          - 'link "BTC: 59.2% ETH: 11.2%" [ref=e1285] [cursor=pointer]':
+            - /url: /charts/bitcoin-dominance/
+        - generic [ref=e1286]:
+          - generic [ref=e1287]:
+            - emphasis [ref=e1288]: l
+            - text: "ETH Gas:"
+          - generic [ref=e1291] [cursor=pointer]:
+            - text: 0.12 Gwei
+            - generic [ref=e1292]: O
+        - generic [ref=e1293]:
+          - generic [ref=e1294]: "Fear & Greed:"
+          - link "53/100" [ref=e1296] [cursor=pointer]:
+            - /url: /charts/fear-and-greed-index/
+            - generic [ref=e1297]: 53/100
+        - generic [ref=e1301]:
+          - generic [ref=e1302] [cursor=pointer]:
+            - generic [ref=e1303]: "Boost #1"
+            - link "BULL logo BULL 100" [ref=e1304]:
+              - /url: /currencies/bull-theleader/
+              - img "BULL logo" [ref=e1307]
+              - text: BULL
+              - generic [ref=e1308]:
+                - img [ref=e1309]
+                - generic [ref=e1310]: "100"
+          - generic [ref=e1311] [cursor=pointer]:
+            - generic [ref=e1312]: "Boost #2"
+            - link "EVAA logo EVAA 50" [ref=e1313]:
+              - /url: /currencies/evaa-protocol/
+              - img "EVAA logo" [ref=e1316]
+              - text: EVAA
+              - generic [ref=e1317]:
+                - img [ref=e1318]
+                - generic [ref=e1319]: "50"
+      - generic [ref=e1321]:
+        - button "Get listed" [ref=e1323]:
+          - generic [ref=e1325]:
+            - text: Get listed
+            - img [ref=e1326]
+        - link "API" [ref=e1328] [cursor=pointer]:
+          - /url: https://coinmarketcap.com/api/pricing/
+  - iframe [ref=e1329]:
+    
+  - alert [ref=e1330]
+  - generic:
+    - generic:
+      - img
+    - generic [ref=e1336] [cursor=pointer]:
+      - generic [ref=e1338]:
+        - img [ref=e1339]
+        - generic [ref=e1341]: Ask CMC AI
+      - button "Shift + /" [ref=e1342]:
+        - generic [ref=e1345]: Shift + /
