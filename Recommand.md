@@ -553,3 +553,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`，再批量抽 `cmc-ai.json`。
 - 先讀 `refx` 26 小時內檔案，優先判斷宏觀是 `risk-off + 油價` 主導，還是 `BTC conference / 立法 / 穩定幣` 主導，再決定報告重心。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補真正命中的題材大幣） > `CoinGecko News`。
+
+## 2026-04-28
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `162` 筆 Trending、`62` 檔清單1、`8` 檔清單2。
+- 今天清單2 明顯偏向 `DeFi 借貸 / 信用修復`、`機構支付 rails`、`AI 基建`，不是全面 altseason；真正值得提高權重的是 `MORPHO / TAO / PENDLE / BGB`。
+- `refx` 在 `26` 小時條件內命中 `2` 份；共同主線非常乾淨：`BTC / ETF / 機構資金` 仍偏多，`支付 / 穩定幣 / 合規入口` 持續推進，但 `Aave / KelpDAO` 修復與 `美伊 / 油價` 仍讓市場保持高波動。
+- 外部搜尋這次真正有補強價值的主要只有 `AAVE` 與 `MORPHO`；`RIVER / SIREN / BGB / COMP / PENDLE` 多數仍是 `CMC AI / Community` 訊號明顯高於 `crypto.news / CoinGecko News`。
+
+### 本次踩坑
+- `CMC AI` 的 `What are people saying` 區段有時會給出與現價不一致的支撐位或引用偏舊貼文，例如 `RIVER` 出現不合理的 `$8.75 support`；這類內容只能當情緒背景，不能直接抄成清算帶。
+- `CoinGecko News` 今天對 8 檔仍然低命中，大多回價格頁、研究頁或泛市場內容，不適合批量逐幣補資料。
+- 主工作樹 `E:\work\Crypto` 仍有 user 既有 `.gitignore` 修改與未追蹤 `.playwright-cli/`；commit 時只 add `TrackingList_20260428.md` 與 `Recommand.md`，不要把其他變更一起送出。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 若清單2 仍低於 `10` 檔，就維持實際檔數，優先提高每檔事件線密度，不要為了形式硬補滿 `15`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 `DeFi / 支付 / 機構化` 題材） > `CoinGecko News`。
