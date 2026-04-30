@@ -571,3 +571,36 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 若清單2 仍低於 `10` 檔，就維持實際檔數，優先提高每檔事件線密度，不要為了形式硬補滿 `15`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 `DeFi / 支付 / 機構化` 題材） > `CoinGecko News`。
+
+## 2026-04-29
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `165` 筆 Trending、`64` 檔清單1、`7` 檔清單2。
+- `CMC AI` 的 `learn-faq` JSON 仍可穩定用 `Invoke-WebRequest` + regex 抓出；今天對 `MX / LIT / AAVE / TAO / BCH / PENDLE / COMP` 全部命中，足夠整理 `latest news / roadmap / people are saying`。
+- `refx` 在 `26` 小時條件內命中 `20260428-15.md`、`20260428-21.md`、`20260429-07.md` 共 `3` 份；共同主線很清楚：`油價 / Hormuz / OPEC+ 風險升溫`、`BTC 制度化偏多但零售偏弱`、`RWA / 穩定幣 / 機構抵押品基建仍在推進`、`DeFi 安全折價未退`。
+
+### 本次踩坑
+- `crypto.news` 與 `CoinGecko News` 今天對 `MX / BCH / COMP` 的逐幣命中率仍低，很多結果只回價格頁、舊稿或泛市場內容；若沒有比 `CMC AI / refx` 更高品質的新訊，不要硬湊來源。
+- 今日清單2 只有 `7` 檔，代表市場依舊是選擇性輪動；這種日子重點應放在每檔事件線密度與分組判讀，不要為了形式硬補滿 `15`。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再批量抽 `CMC AI learn-faq`，以 `latest news + roadmap` 為主體，`people are saying` 只補情緒與支撐阻力。
+- 先讀 `refx` 再決定報告重心；若背景仍是 `油價 / 宏觀風險偏高 + BTC/RWA 制度化偏多`，就優先提高 `藍籌 DeFi / RWA / AI infra` 的比重，而不是把報告寫成全面 altseason。
+
+## 2026-04-30
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`61` 檔清單1、`11` 檔清單2。
+- `CMC AI` 的 `learn-faq` JSON 仍可穩定用 `Invoke-WebRequest` + regex 抓出；今天對 `RIVER / ASTER / TAO / LIT / SIREN / BSV / BGB / PENDLE / APT / COMP / BEAT` 全部命中。
+- `refx` 在 `26` 小時條件內命中 `4` 份；今天最乾淨的共同主線是 `穩定幣支付正式進主流平台與企業 API`，比單一幣種八卦更重要：`Meta -> USDC -> Solana/Polygon`、`Visa -> Base + 5 chains`、`Modern Treasury -> Polygon`。
+
+### 本次踩坑
+- 這輪 `crypto.news` 真正有補強價值的仍只集中在少數大題材標的，如 `TAO / PENDLE / APT / ASTER`；對 `RIVER / SIREN / BSV / BGB / COMP / BEAT` 的逐幣即時新聞命中率仍低或偏舊，不要硬湊來源。
+- `BEAT` 今天碰到 `Hibt` 下架事件，說明低價邊界上方的小盤幣即使進入清單2，也可能先被流動性事件主導；不能因 `RSI <= 60` 就視為可配置標的。
+- 若 PowerShell 內要讀 automation memory，不要假設 `$env:CODEX_HOME` 一定存在；這次直接用明確路徑或先做 fallback 才穩。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再先讀 `refx`，若市場主線仍是 `支付 rails / 穩定幣 / 企業 API`，就優先提高 `BGB / APT / LIT / 其他支付與 RWA infra` 的權重，而不是先看小盤 meme 化標的。
+- 若 `CoinGlass` 仍拿不到批量精確數值，就繼續用 `現價 + 整數位 + 關鍵支撐阻力 + 社群提及價位` 推估清算集中區，並在報告內明示是估算。
