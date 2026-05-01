@@ -604,3 +604,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
 - 再先讀 `refx`，若市場主線仍是 `支付 rails / 穩定幣 / 企業 API`，就優先提高 `BGB / APT / LIT / 其他支付與 RWA infra` 的權重，而不是先看小盤 meme 化標的。
 - 若 `CoinGlass` 仍拿不到批量精確數值，就繼續用 `現價 + 整數位 + 關鍵支撐阻力 + 社群提及價位` 推估清算集中區，並在報告內明示是估算。
+
+## 2026-05-01
+
+### 本次新增觀察
+- 今天直接沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `162` 筆 Trending、`60` 檔清單1、`13` 檔清單2。
+- `E:\work\Crypto\refx` 這次應直接讀主工作樹而不是 automation worktree；worktree 內的 `refx` 時間戳可能因 checkout 失真。今天用 `CreationTime` 篩 `26` 小時內檔案，命中 `20260430-06.md`、`20260430-12.md`、`20260430-18.md`、`20260501-06.md` 共 `4` 份。
+- 今天最乾淨的產業主線不是全面 alt 反彈，而是 `tokenized gold / RWA` 與 `支付 rails / 交易所分發 / 合規入口`。`XAUt / PAXG / BGB / APT / NEXO` 的敘事品質，明顯高於 `SIREN / GENIUS / BSV / AR` 這類高波動或舊敘事標的。
+- CoinGecko `RWA Report 2026` 對 `XAUt / PAXG` 很有補強價值：代幣化商品市值年增 `289%` 至約 `$5.5B`，而黃金代幣是主驅動。這讓黃金代幣不只是避險交易，而是 `RWA 結構成長` 的核心受益者。
+
+### 本次踩坑
+- 不要用 automation worktree 內的 `refx` 檔案時間直接篩選；它可能因為 checkout 導致 `LastWriteTime` 不可信。這次以主工作樹 `E:\work\Crypto\refx` 的 `CreationTime` 為準才正確。
+- `CMC AI` 對少數標的（例如 `AR / DASH`）最新內容偏舊或偏社群技術分析，不能誤寫成當日新催化；這種情況要接受「沒有更強新訊」本身就是結論。
+- `CoinGecko News` 逐幣命中率仍低，但研究報告對主題型資產有價值；適合拿來補 `RWA / tokenized gold` 這種產業面，不適合批量逐幣補新聞。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`，再直接讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔。
+- 若市場背景仍是 `油價 / 伊朗 / Hormuz` 壓力未退，就優先提高 `XAUt / PAXG / BGB / APT / NEXO` 這類防守或合規主線資產的比重，而不是先看小盤高 beta。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補高品質命中） > `CoinGecko Research`（補主題/產業背景） > `CoinGecko News`。
