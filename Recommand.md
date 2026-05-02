@@ -622,3 +622,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`，再直接讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔。
 - 若市場背景仍是 `油價 / 伊朗 / Hormuz` 壓力未退，就優先提高 `XAUt / PAXG / BGB / APT / NEXO` 這類防守或合規主線資產的比重，而不是先看小盤高 beta。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（只補高品質命中） > `CoinGecko Research`（補主題/產業背景） > `CoinGecko News`。
+
+## 2026-05-02
+
+### 本次新增觀察
+- 今天沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `162` 筆 Trending、`63` 檔清單1、`12` 檔清單2。
+- `E:\work\Crypto\refx` 這次在 `26` 小時條件內只命中 `20260501-06.md` 與 `20260501-21.md` 兩份；共同主線很清楚：`伊朗 / 荷姆茲 / 油價 / 更久高利率` 壓住全面風險偏好，但 `BTC 制度化` 與 `stablecoin / tokenized finance / payment rails` 仍在推進。
+- 今天最乾淨的逐幣主線不是最低 RSI，而是 `BGB / NEXO / HYPE / BCH / TAO`。其中 `BGB` 最貼近 `payment rail`，`NEXO` 最貼近 `合規借貸 / CeFi 收益`，`HYPE` 代表真實 perps 交易量，`BCH` 有 `Kraken Institutional custody + 5 月升級`，`TAO` 則是 AI 板塊龍頭但已不是低位。
+- `RIVER` 雖然是今天 `24H RSI` 最低，但 `CMC AI` 仍明確提到 `volume spike + squeeze risk + token concentration`；低 RSI 不能直接解讀成可配置標的。
+
+### 本次踩坑
+- 批量抓 `CMC AI` 時，直接在巢狀 PowerShell 中輸出超長 JSON 容易看起來像沒結果；這次改成先落 `E:\work\Crypto\.cache\daily-crypto-report\yyyyMMdd\cmc-ai.json` 再讀比較穩。
+- `crypto.news` 與 `CoinGecko News` 對 `DCR / ZEN / BEAT / SIREN` 這類標的命中率仍低，多數結果仍偏價格頁、舊稿或無關內容；如果沒有比 `CMC AI / refx` 更高品質的新訊，不要硬湊來源。
+- `HYPE / TAO` 雖然都還在 `24H RSI <= 60`，但已經不是舒適低位。報告內要明確寫成 `趨勢延續交易`，不要誤寫成超跌組。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `summary.json`。
+- 先讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔，判斷主線是 `油價 risk-off` 還是 `stablecoin / payment rail / BTC 制度化`。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 HYPE / TAO / NEXO 這類真有命中的標的） > `CoinGecko Research`（補 Hyperliquid、RWA、產業背景） > `CoinGecko News`。
