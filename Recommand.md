@@ -640,3 +640,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `summary.json`。
 - 先讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔，判斷主線是 `油價 risk-off` 還是 `stablecoin / payment rail / BTC 制度化`。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 HYPE / TAO / NEXO 這類真有命中的標的） > `CoinGecko Research`（補 Hyperliquid、RWA、產業背景） > `CoinGecko News`。
+
+## 2026-05-03
+
+### 本次新增觀察
+- 今天沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `164` 筆 Trending、`65` 檔清單1、`10` 檔清單2。
+- `E:\work\Crypto\refx` 在 `26` 小時條件內命中 `20260502-12.md` 與 `20260502-18.md` 兩份；共同主線延續昨天：`油價 / 伊朗 / Hormuz` 壓風險偏好，但 `BTC 制度化` 與 `stablecoin / payment rail / 合規借貸` 沒停。
+- 今天最乾淨的逐幣主線不是最低 RSI，而是 `BGB / NEXO / OKB / ASTER / TAO`。其中 `BGB / NEXO / OKB` 對齊 `支付 / 抵押 / 合規交易所`，`ASTER` 對齊 `on-chain perps infra`，`TAO` 對齊 `AI + ETF 預期`。
+- `crypto.news` 這次對 `NEXO / ASTER / GENIUS / TAO` 有實質補強；對 `MX / LPT / ZEN / OKB` 仍然以 `CMC AI / Community` 訊號更乾淨。
+
+### 本次踩坑
+- `GENIUS` 在 `CMC AI` 會混入美國 `GENIUS Act` 的監管新聞；整理時必須手動拆開「代幣 / 交易終端」與「同名法案」兩條線，不能直接把政策新聞當作幣本身催化。
+- `MX / OKB` 這類交易所幣在 `CMC AI` 的最新事件常偏舊，像 token burn、合約升級或平台整合；若沒有更近的外部命中，就應老實寫成「近期缺乏更強新催化」。
+- 今天清單2 只有 `10` 檔，仍然不適合硬補滿 `15`；比起擴充標的數量，更重要的是提高單檔事件線密度與風險說明。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 若名單裡出現 `GENIUS` 這種可能與法規或通用名詞撞名的標的，先做來源去歧義，再寫逐幣動態。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 `NEXO / ASTER / TAO / 大題材幣`） > `CoinGecko Research`（補產業背景） > `CoinGecko News`。
