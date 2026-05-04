@@ -658,3 +658,21 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 若名單裡出現 `GENIUS` 這種可能與法規或通用名詞撞名的標的，先做來源去歧義，再寫逐幣動態。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補 `NEXO / ASTER / TAO / 大題材幣`） > `CoinGecko Research`（補產業背景） > `CoinGecko News`。
+
+## 2026-05-04
+
+### 本次新增觀察
+- 今天沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `163` 筆 Trending、`64` 檔清單1、`10` 檔清單2。
+- `E:\work\Crypto\refx` 在 `26` 小時條件內命中 `20260503-08.md`、`20260503-14.md`、`20260504-05.md` 三份；共同主線比昨天更明確：`伊朗 / 荷姆茲 / 油價 / 航運` 仍壓住全面風險偏好，但 `BTC 制度化` 與 `tokenized finance / payment rails / 合規交易所基建` 仍持續推進。
+- 今天最乾淨的逐幣主線不是最低 RSI，而是 `CAKE / OKB / ETH / HNT / LIT`。其中 `CAKE` 對齊 `tokenized stocks / RWA trading`，`OKB` 對齊 `BlackRock BUIDL collateral`，`ETH` 對齊 `whale accumulation + Glamsterdam`，`HNT` 對齊 `DePIN 實際用量`，`LIT` 對齊 `payment infra + EVM mainnet`。
+- `crypto.news` 這次真正有補強價值的仍集中在 `HYPE`；對 `MX / HNT / LIT / CAKE / OKB / DASH` 這類標的，`CMC AI / Community` 仍比外部搜尋更近、更聚焦。
+
+### 本次踩坑
+- 這次用 `apply_patch` 誤把 `Recommand.md` 蓋成 placeholder；後續若要更新主工作樹的絕對路徑檔案，先確認 patch 命中的是既有檔，不要直接用 `Add File`。
+- `MX` 這類平台幣今天雖然 `24H RSI` 最低，但 `CMC AI` 的最新事件仍偏舊；低 RSI 不能直接等同高優先度。
+- `HYPE / GENIUS / SIREN` 今天都還在 `RSI <= 60` 名單，但本質仍是高 beta 交易標的；報告內要持續明寫成 `趨勢 / 事件交易`，不要誤寫成防守型超跌組。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
+- 先讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔，判斷主線仍是 `油價 risk-off`，還是 `tokenized finance / payment rails / BTC 制度化` 在搶回主導權。
+- 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補真正有命中的大型或高 beta 題材） > `CoinGecko Research`（補產業背景） > `CoinGecko News`。
