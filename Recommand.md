@@ -676,3 +676,16 @@
 - 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json` 與 `cmc-ai.json`。
 - 先讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔，判斷主線仍是 `油價 risk-off`，還是 `tokenized finance / payment rails / BTC 制度化` 在搶回主導權。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補真正有命中的大型或高 beta 題材） > `CoinGecko Research`（補產業背景） > `CoinGecko News`。
+
+## 2026-05-05
+
+### 本次新增觀察
+- `crypto.news/feed` 與 `blocktempo.com/feed` 都可穩定讀到 `2026-05-04` 的最新條目，拿來做 26 小時篩選比逐頁翻站穩定。
+- `CoinGecko` 的 `https://www.coingecko.com/zh-tw/news` 與 `https://www.coingecko.com/en/news` 這次都碰到 human verification / Cloudflare challenge；直接 `Invoke-WebRequest` 與 Playwright 瀏覽都只能看到驗證頁，不能當主抓取源。
+- `CoinGecko News` 的替代做法是先用搜尋結果 / front page snippet 確認當日主題，再補 `RWA Report 2026` 這類研究頁；這次可用的主線是 `BTC 80K`、`stablecoin yield / CLARITY Act`、`RWA / tokenization`。
+- `CMC AI` learn-faq JSON 仍然最好用。這次先抓 `target-list-2.json` 再抽 FAQ，對 `CAKE / OKB / LINK / ETH / HYPE / TAO / MNT / ZRO / COMP / BSV / DCR` 的訊號最乾淨。
+
+### 下次優先順序
+- 先跑 `scripts/automation_daily_crypto_report.ps1`，再用 `cmc-ai-summary-lite.json` 直接拼報告，不要退回手工逐頁讀 CMC AI。
+- 若 `CoinGecko News` 仍持續挑戰驗證，保留 `search snippet + research report` 作替代來源，避免在這個步驟耗太多時間。
+- `refx` 仍以 `CreationTime` 篩選，今天可用新檔是 `20260504-11.md`、`20260504-17.md`、`20260505-06.md`。
