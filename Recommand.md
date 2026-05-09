@@ -677,6 +677,24 @@
 - 先讀主工作樹 `E:\work\Crypto\refx` 的 `CreationTime <= 26h` 新檔，判斷主線仍是 `油價 risk-off`，還是 `tokenized finance / payment rails / BTC 制度化` 在搶回主導權。
 - 外部新聞優先順序建議為：`CMC AI / CMC Community` > `crypto.news`（優先補真正有命中的大型或高 beta 題材） > `CoinGecko Research`（補產業背景） > `CoinGecko News`。
 
+## 2026-05-09
+
+### 本次新增觀察
+- 今天沿用主 repo 的 `scripts/automation_daily_crypto_report.ps1`，並指定 `E:\work\browser-profiles\x-playwright`，可穩定抓到 `171` 筆 Trending、`70` 檔清單1、`2` 檔清單2。
+- 今日清單2 只剩 `IP / GAS`，代表 RSI 篩選後已經不是全面超跌日，而是少數低流動性標的被撈出來；若沒有更強外部催化，不要硬把它們寫成中期主軸。
+- 今天最硬的外部主線其實是 `BTC 80K`、`stablecoin / market structure / tokenization`、`RWA / tokenized gold`、`交易所與託管風險`，這些比單一低 RSI 標的更有共識。
+- `refx` 在 `26` 小時條件內命中 `20260508-14.md`、`20260508-21.md`、`20260508-22.md`、`20260509-05.md` 共 `4` 份；共同主線就是 `合規鏈上金融`、`高 beta 仍被美股風險偏好帶動，但地緣/油價壓力未退`。
+
+### 本次踩坑
+- `crypto.news` 與 `CoinGecko News` 前頁雖然都有值錢訊號，但直接逐篇追到深頁面時，部分標題很容易被一般搜尋導到過舊稿或非當日重點；這次改以首頁最新區塊與 front page 標題為主比較穩。
+- `CoinGecko News` 的首頁混有大量非加密或轉載稿，後續如果要自動抽取，建議先用標題與時間篩掉與主題無關內容，不要直接信任整頁排序。
+- `GAS` 這種 legacy ticker 今天雖然進了 RSI 候選，但沒有同步出現值得引用的新催化；後續仍以 `缺乏更強新訊` 作結論，不要硬補。
+
+### 下次優先順序
+- 先跑本地 `scripts/automation_daily_crypto_report.ps1` 生成 `target-list-2.json`。
+- 再優先看 `BTC / tokenization / stablecoin / RWA / 託管` 類主線，若外部新聞仍是這種結構，就先把大脈絡寫清楚，再回頭處理低 RSI 候選。
+- `refx` 持續只看 `CreationTime` 26 小時內的新檔，不要回收舊檔混進今日結論；若主線還是 `oil / geopolitics`，報告重心就要偏防守。
+
 ## 2026-05-05
 
 ### 本次新增觀察
