@@ -707,3 +707,21 @@
 - 先跑 `scripts/automation_daily_crypto_report.ps1`，再用 `cmc-ai-summary-lite.json` 直接拼報告，不要退回手工逐頁讀 CMC AI。
 - 若 `CoinGecko News` 仍持續挑戰驗證，保留 `search snippet + research report` 作替代來源，避免在這個步驟耗太多時間。
 - `refx` 仍以 `CreationTime` 篩選，今天可用新檔是 `20260504-11.md`、`20260504-17.md`、`20260505-06.md`。
+
+## 2026-05-10
+
+### 可行方法
+- `crypto.news` 用 Playwright 先 `goto` 首頁，再以 `main a[href]` 過濾 `crypto.news/` 連結，能穩定抽出最新標題與相對時間。
+- 文章正文比對時，直接抓 `h1` 與 `main p` 前幾段最乾淨，避免把 nav、價格條與頁尾雜訊一起算進來。
+- `BlockTempo 2026` archive 頁 `https://www.blocktempo.com/2026/` 可以直接當最新文章索引，但要白名單 crypto 相關題材，因為同頁會混入大量 AI / 生活 / 商業稿。
+- Playwright CLI 的 `run-code` 建議先寫成暫存 `.js` 檔，再用 `--filename` 呼叫；這次比直接丟長字串穩定很多。
+
+### 本次踩坑
+- `CoinGecko News` 在專用 profile 下持續顯示 human verification；等待 12 秒仍未解除，暫時不能把它當作可驗證的 26 小時主來源。
+- `run-code --filename` 若傳入 WSL 路徑，CLI 會把它誤解成 `C:\mnt\c\...`；這次已確認必須傳 Windows 路徑。
+- `crypto.news` 首頁若直接讀 `body.innerText`，會先吃到大量導覽與價格列；要先鎖 `main p` 才能拿到文章摘要。
+
+### 下次優先順序
+- 先跑 `crypto.news` 與 `BlockTempo 2026` 的最新列表，再決定是否需要補更深的文章正文。
+- 若 `CoinGecko News` 仍被驗證擋住，先改用可穩定讀取的官方研究頁或搜尋結果摘要，不要在驗證頁上耗時間。
+- 這次可重用的主線是 `BTC / CLARITY / stablecoin infrastructure / RWA / Hormuz risk`，下次優先沿這條線補稿。
