@@ -725,3 +725,21 @@
 - 先跑 `crypto.news` 與 `BlockTempo 2026` 的最新列表，再決定是否需要補更深的文章正文。
 - 若 `CoinGecko News` 仍被驗證擋住，先改用可穩定讀取的官方研究頁或搜尋結果摘要，不要在驗證頁上耗時間。
 - 這次可重用的主線是 `BTC / CLARITY / stablecoin infrastructure / RWA / Hormuz risk`，下次優先沿這條線補稿。
+
+## 2026-05-11
+
+### 可行方法
+- `crypto.news/feed/` 比首頁更穩，直接抓 `pubDate` 就能篩出 26 小時內文章，而且可同時拿到標題、連結與摘要。
+- `BlockTempo` 的 `https://www.blocktempo.com/feed/` 也能直接篩選時間，但最新內容大多是 AI / agentic economy / 宏觀背景稿，crypto 相關主題要先做關鍵字白名單。
+- `E:\work\Crypto\refx` 仍應依 `CreationTime` 篩 26 小時內新檔。今天實際命中 `20260510-17.md`、`20260510-18.md`、`20260511-06.md`，其中 `20260510-17.md` 只有阻塞說明。
+- `CoinGecko News` 在 `E:\work\browser-profiles\x-playwright` 下仍停在 `Verifying you are human`，不能把它當主流程資料源。
+
+### 本次踩坑
+- `crypto.news` 首頁用 Playwright 直抓 DOM 時，常只看到單一 featured card；若要做每日整理，RSS 比首頁穩定。
+- `BlockTempo` 的 feed / archive 會混入大量非 crypto 主題，不能直接全收，否則報告會被 AI 與生活稿淹沒。
+- 若要補 CoinGecko 背景，只能先走可讀的研究頁或搜尋摘要，別再把 news 頁當成可驗證入口。
+
+### 下次優先順序
+- 先讀 `crypto.news/feed/` 與 `blocktempo.com/feed/`，再決定是否需要補正文。
+- `CoinGecko News` 若仍被驗證擋住，先改用可穩定讀取的官方研究頁或搜尋摘要。
+- 今天的主線已經很清楚：`BTC / Strategy / 宏觀風險`、`stablecoin / tokenization / agentic rails`、`低 RSI 但缺催化的候選`。
