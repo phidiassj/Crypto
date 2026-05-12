@@ -743,3 +743,19 @@
 - 先讀 `crypto.news/feed/` 與 `blocktempo.com/feed/`，再決定是否需要補正文。
 - `CoinGecko News` 若仍被驗證擋住，先改用可穩定讀取的官方研究頁或搜尋摘要。
 - 今天的主線已經很清楚：`BTC / Strategy / 宏觀風險`、`stablecoin / tokenization / agentic rails`、`低 RSI 但缺催化的候選`。
+## 2026-05-12
+
+### 可行方法
+- `crypto.news` 首頁最新區塊與 `main` 內的 headline / time 可以穩定抓到 12 小時內文章，包含 `Ronin`, `Corpay`, `Circle Arc`, `Strategy`, `SUI`, `Ondo`, `BNY` 等主線。
+- `CoinGecko News` 這次不再卡 human verification，可直接作為新聞索引頁使用，但內容很多是 syndication，要先看標題與時間再決定是否保留。
+- `BlockTempo 2026 archive` 直接可用，雖然第一次 `domcontentloaded` 會超時，但頁面實際仍可載入，且能用日期過濾 2026-05-11 的 crypto 文章。
+
+### 本次踩坑
+- `BlockTempo` archive 首次載入較慢，單純等 `domcontentloaded` 不夠穩；若 timeout，仍可改讀目前頁面狀態再抓 snapshot。
+- `CoinGecko News` 首頁混有大量非加密或轉載稿，整理時要把「媒體轉載的 crypto 熱點」與「真正的市場主線」分開。
+- `crypto.news` 有不少 partner content，後續若要自動化，要先白名單 news / markets / top stories，避免把贊助稿寫進主報告。
+
+### 下次優先順序
+- 先讀 `refx` 26 小時內新檔，再用 `crypto.news` / `CoinGecko News` / `BlockTempo archive` 交叉補強。
+- 若 `CoinGecko News` 能穩定打開，就把它納入主來源，不必再預設會被驗證阻擋。
+- BTC 主線仍要跟著 `stablecoin / tokenization / custody / risk-off` 一起看，不要把價格新聞單獨放大。
