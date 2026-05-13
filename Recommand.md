@@ -759,3 +759,22 @@
 - 先讀 `refx` 26 小時內新檔，再用 `crypto.news` / `CoinGecko News` / `BlockTempo archive` 交叉補強。
 - 若 `CoinGecko News` 能穩定打開，就把它納入主來源，不必再預設會被驗證阻擋。
 - BTC 主線仍要跟著 `stablecoin / tokenization / custody / risk-off` 一起看，不要把價格新聞單獨放大。
+
+## 2026-05-13
+
+### 可行方法
+- `crypto.news/rss` 可穩定抓到 `pubDate`、標題、連結與摘要，這次直接拿來做 26 小時切窗最省事。
+- `https://www.blocktempo.com/2026/` archive page 可穩定抓到 2026-05-12 / 2026-05-13 的文章卡片與摘要文字，雖然沒有 `time` 標籤，但標題池夠用。
+- `CoinGecko News` 最新消息頁可用 Playwright 讀到卡片，雖然 RSS 回 `403 Forbidden`，但頁面 HTML 本身可取到最新條目。
+- `E:\work\Crypto\refx` 這輪仍以 `CreationTime` 篩 26 小時內檔案，穩定命中 `20260512-07.md`、`20260512-13.md`、`20260512-19.md`、`20260513-06.md`。
+
+### 本次踩坑
+- `crypto.news` 首頁直接 `goto` 會出現 `net::ERR_ABORTED`，改成 `https://crypto.news/news/` 或 RSS 比較穩。
+- `BlockTempo` 的 `/feed/` 仍然是舊的 attachment RSS，不適合作為新聞主來源。
+- `BlockTempo` archive page 沒有可直接信任的 `time` 標籤，若要精準切小時窗，需要再開文章頁抓 `article:published_time`。
+- `CoinGecko News RSS` 這次仍是 `403 Forbidden`，不要再把 RSS 當主路徑。
+
+### 下次優先順序
+- 先讀 `crypto.news/rss`、`BlockTempo 2026 archive`、`CoinGecko News` 頁面卡片，再決定是否要進文章正文。
+- 若要進一步縮小 26 小時窗，先用 `pubDate` 明確可得的 `crypto.news` 當主骨架，再用 `BlockTempo` 與 `CoinGecko` 補上下文。
+- `refx` 主線這次已經很清楚：`tokenization / stablecoin rails / BTC macro beta / Iran risk / selective alt rotation`。
