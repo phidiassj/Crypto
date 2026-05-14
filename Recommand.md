@@ -778,3 +778,16 @@
 - 先讀 `crypto.news/rss`、`BlockTempo 2026 archive`、`CoinGecko News` 頁面卡片，再決定是否要進文章正文。
 - 若要進一步縮小 26 小時窗，先用 `pubDate` 明確可得的 `crypto.news` 當主骨架，再用 `BlockTempo` 與 `CoinGecko` 補上下文。
 - `refx` 主線這次已經很清楚：`tokenization / stablecoin rails / BTC macro beta / Iran risk / selective alt rotation`。
+
+## 2026-05-14
+
+### 可行方法
+- Playwright CLI 的正解是 `--persistent --profile E:/work/browser-profiles/x-playwright`，不是在 `launchOptions.args` 裡硬塞 `--user-data-dir`。
+- `crypto.news/news/` 可以用 `Read more - ...` 連結配對 `time` 節點，穩定抓出 26 小時內卡片。
+- CoinGecko News 要先按一次 `顯示更多新聞`，才能把較新的卡片展開到可讀範圍。
+- BlockTempo 2026 archive 用 `article` 結構，直接讀 `article.innerText` 就能抽標題與日期順序。
+
+### 本次踩坑
+- `launchOptions.args` 裡放 `--user-data-dir` 會被 Playwright CLI 明確拒絕，必須改用 `open --persistent --profile ...`。
+- CoinGecko News 頁面 console error 很多，但內容仍可用；不要因為 console 噪音就直接放棄頁面。
+- `crypto.news` 首頁雜訊較高，`/news/` 比首頁更穩定。
