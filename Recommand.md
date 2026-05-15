@@ -219,6 +219,25 @@
 
 ## 2026-04-08
 
+## 2026-05-15
+
+### 可行方法
+- `crypto.news/news/` 這次最穩的抽法是直接讀 `.post-loop__content`，再取同卡片內的 `time[datetime]`；列表頁本身就能直接拿到 `title / href / datetime`。
+- CoinGecko News 頁面雖然外觀看起來像新聞聚合，但今天實際最穩定可重用的只有兩個 `ns3.ai` 轉載連結：`韓亞金融將斥資1兆韓元收購 Dunamu 6.55% 股份` 與 `USDC Treasury鑄造2.5億枚USDC`。
+- BlockTempo `2026 archive` 不適合硬抓 anchor 當主流程；用 `document.body.innerText` 依 `BY ASPEN YYYY-MM-DD` 文字格式切段反而更穩，至少能穩定抽出今日與昨日的標題清單。
+- Playwright CLI `run-code --filename` 在這台機器上要用 Windows 路徑，不能直接丟 `/mnt/...`；否則會被誤解成 `C:\mnt\...`。
+- 如果是從 WSL 呼叫 Playwright wrapper，必須先讓 WSL 看得到 `node`。今天的可行做法是把 `/mnt/c/Program Files/nodejs/node.exe` 接成 `~/bin/node` 再跑 wrapper。
+
+### 本次踩坑
+- `crypto.news` 首頁會有少量重複或次序漂移，但 `datetime` 欄位可靠，足以做 26 小時內篩選。
+- CoinGecko 頁面 console error 很多，且頁面大部分內容是 BlockTempo 轉載或共用聚合，不適合當唯一來源，只能當輔助交叉驗證。
+- BlockTempo archive 直接查 `a[href*="blocktempo.com/2026/"]` 幾乎只會拿到導覽與分頁，不會拿到真正的文章卡片。
+
+### 下次優先順序
+- 先把 `crypto.news` 與 CoinGecko 的可見卡片抽成 JSON，再用 BlockTempo archive 補強標題與日期。
+- 需要固定重跑時，可以把 WSL node shim 與 Windows 路徑規則寫成腳本，避免每次手動處理。
+- 如果要做更完整的 26 小時文章窗，BlockTempo 還是要補一層文章頁抓取，而不是只靠 archive 頁。
+
 ### 本次新增觀察
 - 今天沿用 `C:\Users\phidi\.codex\worktrees\2492\Crypto\scripts\automation_daily_crypto_report.ps1`，並把 `-OutputRoot` 指到目前 worktree，可穩定抓到 `164` 筆 Trending、`62` 檔清單1、`15` 檔清單2。
 - `refx` 在 `26` 小時條件內命中 `20260407-12.md`、`20260407-18.md`、`20260408-07.md` 共 `3` 份；這次最有用的共同主線是 `中東風險暫時降溫`、`BTC 重新站回 70k / 71k`、`穩定幣 / 支付 / 交易所擴張`。
