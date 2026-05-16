@@ -118,6 +118,23 @@
 - 今天直接沿用 `automation_daily_crypto_report.ps1`，用 `playwright-cli` + 共享 session `aiyoperps-auth` 在 headless 模式穩定抓到 `163` 筆 Trending、`59` 檔清單1、`14` 檔清單2。
 - 今天目標清單2 比昨天少一檔，主因仍是 CMC RSI 只穩定暴露可見 `100` 列；若交叉後只有 `14` 檔，就維持實際結果，不要硬補。
 - `CMC AI` 逐幣頁今天對 `LIT / BSV / XMR / ZEN / AVAX / MNT / LINK / KCS / XAUt / PAXG / MX / GAS / NEO / QTUM` 都可直接讀到近期摘要，足夠支撐報告主體。
+
+## 2026-05-16
+
+### 本次新增觀察
+- `crypto.news/news/` 這次在 Playwright 直接可讀，首頁的 `Today's Top Stories` 已清楚標出 `5 minutes ago` 到 `8 hours ago` 的條目，適合當日內快訊主來源。
+- `CoinGecko News` 實際上是聚合頁，不少條目會導去 `NS3` 或 `BlockTempo`，但它很適合快速抓到近期標題、時間與跨站脈絡。
+- `BlockTempo 2026 archive` 首次 `domcontentloaded` 會超時，但頁面稍後仍可正常讀到文章列表；遇到這種情況，不要重複刷新，直接回來抓已渲染 DOM 即可。
+- `refx` 近 26 小時只有一份可讀 `.md`，但內容 window 本身較早，這次僅作安全 / 情緒 / 宏觀背景，不把它當今日新催化。
+
+### 本次踩坑
+- 不需要硬找各站內建搜尋；對這三個來源來說，首頁 / archive / 聚合頁本身就夠用。
+- `BlockTempo` 的 archive 頁如果卡在 `domcontentloaded`，改等 `load` 或直接重抓 snapshot，比反覆重新導頁更穩。
+
+### 下次優先順序
+- 先抓 `crypto.news` 的即時頭條，再抓 `CoinGecko News` 的聚合標題，最後補 `BlockTempo` archive。
+- 產出報告時先寫「重磅關注」與「脈絡列表」，再補詳述與來源摘要，避免先做長篇細節導致主線被稀釋。
+- `refx` 如果仍只有單一舊 window digest，保持背景參考定位即可，不要硬湊成今日主新聞。
 - `crypto.news` 這次最有價值的是 `AVAX` 與 `LINK` 補充：前者多了 ETF/支付場景，後者多了跨鏈與企業採用脈絡；其餘標的仍以 `CMC AI` 比一般搜尋穩。
 
 ### 本次踩坑
