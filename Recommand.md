@@ -796,6 +796,23 @@
 - 若 `CoinGecko News` 能穩定打開，就把它納入主來源，不必再預設會被驗證阻擋。
 - BTC 主線仍要跟著 `stablecoin / tokenization / custody / risk-off` 一起看，不要把價格新聞單獨放大。
 
+## 2026-05-17
+
+### 可行方法
+- `crypto.news` 單篇文章頁可直接讀 `article:published_time` 與前 2-3 段正文，適合先從 `news/` 索引頁抓連結，再回文章頁做精確 `26` 小時切窗。
+- `CoinGecko News` 今天可讀，但每張卡片常會輸出兩個重複 anchor；抽資料時要先以 `href` 去重，再保留卡片上的相對時間文字。
+- `BlockTempo 2026 archive` 缺精確時分，若要嚴格卡 `26` 小時窗口，應先從 archive 挑候選標題，再開文章頁讀 `article:published_time`。
+
+### 本次踩坑
+- `BlockTempo` archive 會混入大量 `AI / 美股 / 生活` 稿，不先做 crypto 關鍵字白名單，報告很容易失焦。
+- `CoinGecko News` 的聚合標題有時已把摘要串進標題，整理時不要整段照抄，應手動抽核心事件。
+- `refx` 這次三份檔案主線高度一致，適合先抽共通背景，再用新聞站補硬事件，不要把每份 X 摘要細節逐條搬進主文。
+
+### 下次優先順序
+- 先讀 `refx` 的共同主線，再抓 `crypto.news` 的精確時間文章。
+- 再用 `CoinGecko News` 補監管、ETF 修件、鏈上安全與二線基建脈絡。
+- `BlockTempo` 只補有明確 crypto 主線、且文章頁時間落在窗口內的內容。
+
 ## 2026-05-13
 
 ### 可行方法
