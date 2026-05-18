@@ -813,6 +813,23 @@
 - 再用 `CoinGecko News` 補監管、ETF 修件、鏈上安全與二線基建脈絡。
 - `BlockTempo` 只補有明確 crypto 主線、且文章頁時間落在窗口內的內容。
 
+## 2026-05-18
+
+### 本次新增觀察
+- `CoinGecko News` 這次可正常讀取，但卡片結構不穩，直接抓 anchor 容易抓不到時間；反而 `document.body.innerText` 內含 `NS3 (繁體中文)` 與 `40 分鐘前 / 大约 2 小时前` 這類相對時間，可直接拿來做快訊彙總。
+- `crypto.news/news/` 仍適合先抓索引，再逐篇回文章頁讀 `article:published_time` 與前 3-4 段摘要；這次 26 小時內的有效文主要集中在 `5/17 15:34` 之後。
+- `BlockTempo 2026 archive` 的 `article` 卡片文字可直接抽出標題與日期，但文章頁 `article p` 不一定穩定吐正文；這次最可靠的是 `meta article:published_time`，摘要可先退回用 archive 標題與副標。
+
+### 本次踩坑
+- `CoinGecko News` 不要假設每則新聞卡片都會有獨立易抓的 DOM 區塊；若 selector 抓不到時間，先退回 `body.innerText` 做文字切片，比硬找 class 穩。
+- `BlockTempo` 單篇頁雖然可拿到正確時間，但正文 selector 命中率不一致；若只是每日摘要，不需要為了補前幾段反覆重試。
+- 26 小時窗口一定要用絕對時間過濾。像 `crypto.news` 的 `2026-05-16 22:49` 與 `BlockTempo` 的 `2026-05-16 14:39`，今天都已經超窗，不能因為還在首頁就納入。
+
+### 下次優先順序
+- 先抓 `crypto.news` 索引與文章頁精確時間，建立主骨架。
+- 再用 `CoinGecko News` 的可見文字補 `監管 / ETF / 安全 / 二線基建` 脈絡，不必強求每條都回原站全文。
+- `BlockTempo` 優先保留 `支付 / ETF / 地緣風險 / 資本市場` 這種明確主線文章，並先用 `meta published_time` 過濾窗口。
+
 ## 2026-05-13
 
 ### 可行方法
