@@ -15,6 +15,8 @@ Recommand.md
 Resources/
 refx/
 scripts/
+.cache/
+.playwright-cli/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
