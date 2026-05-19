@@ -1,5 +1,23 @@
 # Recommand / run notes
 
+## 2026-05-19
+
+### 本次新增觀察
+- `crypto.news/news/` 的 `Today's Top Stories` 仍是今日最快的英文主來源，卡片上的 `time datetime` 直接就是可用的 UTC 時間，適合精準卡 `26` 小時窗口。
+- `CoinGecko News` 這次雖可正常打開，但卡片 DOM 仍不穩；最穩的做法仍是直接讀 `document.body.innerText`，用 `Blocktempo / NS3 (繁體中文) + 相對時間` 先抽聚合主線，再決定是否追原文。
+- `BlockTempo 2026 archive` 仍很適合當候選池，但若要嚴格過濾 `26` 小時內文章，最好再開單篇讀 `meta article:published_time`；這次 `crypto-market-dump`、`PGSA`、`Trump calls off strike`、`Minnesota custody`、`LemFi`、`Strategy` 都能穩定拿到精確時間。
+- `refx` 這次在 `26` 小時條件內命中 `5` 份，其中 `20260519-07.md` 是失敗紀錄；失敗本身也有價值，代表不是每次都能依賴同一套瀏覽器附加路徑。
+
+### 本次踩坑
+- 在 PowerShell 內批次呼叫 `wsl bash -lc 'for url in ...'` 時，如果 quoting 沒處理好，`$url` 會被吃掉，Playwright 只會重讀當前頁面，最後看起來像「每篇文章都一樣」；後續若要批次抓文，優先用展開後的字面指令，不要在多層 shell 裡混用變數。
+- `CoinGecko News` 不要假設有乾淨可重用的新聞卡片 selector；這次仍然是 `body.innerText` 比逐卡片 selector 穩。
+- `refx` 若出現一份「工具失敗紀錄」，不要把它當內容來源，但要保留到 `Recommand.md`，避免下次重踩同一個瀏覽器控制問題。
+
+### 下次優先順序
+- 先抓 `crypto.news/news/` 的頭條與單篇時間，再用 `BlockTempo 2026 archive -> 單篇 meta published_time` 補中文脈絡。
+- `CoinGecko News` 先當聚合與交叉驗證來源，不要把它當逐篇精讀主來源。
+- 若 `refx` 仍延續 `伊朗 / 荷姆茲 / 殖利率 / 資金流出`，就把 `BTC risk-off` 與 `stablecoin / tokenization / 合規入口` 的對比放在報告最前面。
+
 ## 2026-03-26
 
 ### 可行方法
