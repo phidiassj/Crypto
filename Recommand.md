@@ -879,3 +879,20 @@
 - `launchOptions.args` 裡放 `--user-data-dir` 會被 Playwright CLI 明確拒絕，必須改用 `open --persistent --profile ...`。
 - CoinGecko News 頁面 console error 很多，但內容仍可用；不要因為 console 噪音就直接放棄頁面。
 - `crypto.news` 首頁雜訊較高，`/news/` 比首頁更穩定。
+
+## 2026-05-21
+
+### 本次新增觀察
+- `playwright-cli` 這次用 `open --persistent --profile E:/work/browser-profiles/x-playwright` 可以成功開啟，但 `list` 在這台機器回傳 `no browsers`，後續無法可靠重附 session；若要做多頁連續抓取，較穩的方法是在 WSL 內用 `.sh` 包 `npx -p playwright`，再直接 `launchPersistentContext('E:\\work\\browser-profiles\\x-playwright', { channel: 'chrome' })`。
+- `crypto.news/news/` 首頁顯示的 `2 hours ago / 3 hours ago` 相對時間，與單篇 `article:published_time` 可能差到超過一天；本次實測 `Galaxy / Revolut / Bitwise HYPE / Kraken` 四篇單篇頁都落在 `2026-05-18 ~ 2026-05-19 UTC`，嚴格做 `26` 小時窗口時一定要回單篇或直接抓 meta 驗證，不能只信首頁相對時間。
+- `BlockTempo` 單篇頁的 `article:published_time` 這次穩定可抓，像 `Truth Social ETF withdraw`、`MSOL amended S-1`、`HashKey + SignalPlus`、`THYP volume 8x` 都能拿到精確時間，適合做繁中主來源。
+- `CoinGecko News` 這次依舊最適合當聚合雷達，不適合逐篇精讀主來源；可直接用它確認 `HashKey / HYPE ETF / Ether.fi card` 是否同時進入熱榜。
+
+### 本次踩坑
+- 不要假設 `playwright-cli` session 名稱可跨指令穩定重用；至少在這台 Windows + WSL 環境，`open` 成功不代表 `list` / `run-code` 能重新接上。
+- 如果用 WSL 跑 Playwright，但底層實際調到 Windows `node`，`/mnt/c/...` 路徑有機會被誤解成 `C:\mnt\c\...`；遇到這種情況，優先改成 inline `node` / here-doc，或直接傳 Windows 路徑。
+
+### 下次優先順序
+- 先讀 `refx` 26 小時內新檔，若主線仍是 `HYPE / stablecoin / Hormuz`，先把這三條脈絡拉出來。
+- `BlockTempo` 優先走 `archive -> 單篇 article:published_time`；`CoinGecko News` 繼續當聚合交叉驗證。
+- `crypto.news` 若首頁相對時間仍與單篇 meta 衝突，直接降級成背景來源，不要把它當嚴格 26 小時主來源。
