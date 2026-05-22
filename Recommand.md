@@ -1,5 +1,23 @@
 # Recommand / run notes
 
+## 2026-05-22
+
+### 本次新增觀察
+- Windows 端直接用 `playwright` runtime 會比 `playwright-cli` session reattach 穩。這次用 `npm install --prefix C:\Users\phidi\AppData\Local\Temp\codex-playwright-runtime playwright@1.60.0`，再以 `chromium.launchPersistentContext('E:/work/browser-profiles/x-playwright', { channel: 'chrome' })` 抓站，能穩定讀到 `crypto.news`、`CoinGecko News`、`BlockTempo` 三站。
+- `crypto.news` 這次單篇 `article:published_time` 仍可靠，26 小時窗口內可穩定抓到 `18` 篇；適合拿來補 `HYPE`、`tokenization`、`stablecoin`、`BTC options` 這種硬事件。
+- `CoinGecko News` 這次可正常讀，但聚合屬性更強，會同時混入 `BlockTempo`、`NS3`、`區塊客` 與部分非加密稿；最適合拿來確認主線熱度，不適合當唯一原始來源。
+- `BlockTempo` 單篇頁 `article:published_time` 這次仍穩定可抓，但 `article p` selector 常拿不到正文；若只是每日整理，先用 `archive / 聚合頁標題 + 單篇 meta 時間` 就夠了。
+
+### 本次踩坑
+- 直接在 PowerShell 用 `npx -y -p playwright node -`，`require('playwright')` 沒有成功掛進 stdin 腳本；若要臨時跑 Playwright 腳本，直接裝到暫存目錄比較穩。
+- `CoinGecko News` 本次會把 `AI / 總經 / 非 crypto` 的稿也排在前面，不做關鍵字白名單就很容易把報告寫歪。
+- `BlockTempo` 正文 selector 命中率不一致，不需要為了抓前幾段反覆重試；嚴格卡 `26` 小時時，`meta published_time` 比正文更重要。
+
+### 下次優先順序
+- 先用 Windows `playwright` runtime + `E:\work\browser-profiles\x-playwright` 跑三站，再整理輸出，不必先繞 `playwright-cli` session。
+- `crypto.news` 優先抓單篇 `published_time` 與前 2-4 段摘要；`CoinGecko News` 繼續只當聚合雷達；`BlockTempo` 先抓 `archive -> 單篇 meta time`。
+- 主線優先順序建議為：`HYPE / exchange-perps infra` > `tokenized securities / RWA / stablecoin rails` > `BTC/ETH under war-risk`。
+
 ## 2026-05-19
 
 ### 本次新增觀察
