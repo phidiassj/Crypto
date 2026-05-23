@@ -1,5 +1,20 @@
 # Recommand / run notes
 
+## 2026-05-23
+
+### 本次新增觀察
+- `crypto.news` 這次前 26 小時內確實有不少有效加密稿，但若直接按首頁/索引廣撒連結，會混進 `Fed / 黃金 / AI ETF / 一般總經` 稿；後續整理日報時應先做 crypto 白名單，不要把所有命中都寫進主文。
+- `CoinGecko News` 這次比前兩天更像「快訊聚合器」：最前面的新訊大量來自 `NS3` 與 `BlockTempo`，像 `SEC 延遲代幣化股票豁免`、`ARMA 比特幣儲備法案`、`Kalshi/Polymarket` 都能先在這裡看到。適合當 `2-12` 小時雷達，不適合直接當硬來源全文。
+- `BlockTempo` 單篇 `article:published_time` 這次仍穩，且 `SEC tokenized stocks delay`、`Ondo / 富途老虎監管`、`ICE + OKX oil perp` 這類稿件都能精準卡進 `26` 小時窗口；若要追繁中市場敘事，這站仍是最穩主來源之一。
+
+### 本次踩坑
+- `CoinGecko News` 會把 `BlockTempo` 轉載標題整段帶進 anchor 文字，甚至直接混入副標；若做自動摘要，不要直接拿 `title` 當最終標題，最好手動壓縮成核心事件。
+- `crypto.news` 的單篇頁面雖然有可靠 `published_time`，但有些標題明顯偏 macro 或 AI，而不是加密市場本身；這次如果不人工剔除，報告會被 `Warsh / Waller / gold` 稿洗掉焦點。
+
+### 下次優先順序
+- 先讀 `refx` 判斷大脈絡，再從 `BlockTempo` 與 `crypto.news` 挑真正屬於 `RWA / BTC wrappers / stablecoin rails / prediction markets` 的硬稿。
+- `CoinGecko News` 繼續只當「最新雷達 + 交叉驗證」，特別適合找 `NS3` 類超短時效快訊，但不要把它當唯一正文來源。
+
 ## 2026-05-22
 
 ### 本次新增觀察
