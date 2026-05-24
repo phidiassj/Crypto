@@ -15,6 +15,19 @@
 - 先讀 `refx` 判斷大脈絡，再從 `BlockTempo` 與 `crypto.news` 挑真正屬於 `RWA / BTC wrappers / stablecoin rails / prediction markets` 的硬稿。
 - `CoinGecko News` 繼續只當「最新雷達 + 交叉驗證」，特別適合找 `NS3` 類超短時效快訊，但不要把它當唯一正文來源。
 
+## 2026-05-24
+
+### 本次新增觀察
+- `CoinGecko News` 這次最穩的抓法不是找卡片或內頁連結，而是直接讀 `document.body.innerText`。頁面會把 `NS3 / BlockTempo` 來源名、`大约 2 小时前 / 3 小时前` 這類時間、以及摘要串在一起，足夠拿來當 `2-5` 小時雷達與交叉驗證。
+- `crypto.news` 這次用單篇 `article:published_time` 仍可穩定做 `26` 小時切窗，且有值錢的稿集中在 `Clarity winners`、`ETF outflows`、`Saylor sell`、`Kalshi/Polymarket`、`Squid`；代表它仍是硬來源，但需要主題白名單，不要把所有首頁命中都納入。
+- `BlockTempo` 這次在 `2026` archive 內混入不少 `SpaceX / Grok / 美股 CAPE` 類非核心稿；若是每日加密整理，應只保留 `Iran/Hormuz`、`BTC/ETH 市場結構`、`prediction market`、`RWA / 合規` 這些會直接影響加密風險偏好或制度化主線的文章。
+
+### 本次踩坑
+- `CoinGecko News` 這次內部 `a[href]` 幾乎抓不到乾淨、可逐篇使用的新聞卡片；若還硬走 selector + 內頁流程，會得到空集合，浪費時間。
+
+### 下次優先順序
+- 先抓 `crypto.news` 單篇時間與 `BlockTempo` 文章 meta time，再用 `CoinGecko News body.innerText` 補最短時效的 `NS3 / BlockTempo` headline 串流。
+
 ## 2026-05-22
 
 ### 本次新增觀察
