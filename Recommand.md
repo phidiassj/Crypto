@@ -28,6 +28,18 @@
 ### 下次優先順序
 - 先抓 `crypto.news` 單篇時間與 `BlockTempo` 文章 meta time，再用 `CoinGecko News body.innerText` 補最短時效的 `NS3 / BlockTempo` headline 串流。
 
+## 2026-05-25
+
+### 本次新增觀察
+- 這次 `crypto.news` 的單篇 `article:published_time` 仍然是最穩的英文硬來源，而且主題集中度比前一天更高，直接給出 `ETH foundation / CFTC / Binance Australia / BofA IBIT / Iran macro week` 這種可直接寫進主文的素材。
+- `CoinGecko News` 這次仍最適合作 `NS3` 雷達，而不是逐篇硬來源；它補到的高價值訊號是 `MoonPay x ChatGPT`、`tokenized stocks`、`Fed payment rails`、`HYPE buyback` 與 `Iran deal -> oil down`，很適合拿來決定要不要把某條脈絡拉進重磅區。
+
+### 本次踩坑
+- `BlockTempo` archive 的第一層關鍵字白名單還是不夠嚴，這次仍混進 `Claude Code / DeepSeek` 這類非加密稿；後續整理時要把它當候選池，不要因為命中 `ETF` 或 `Token` 字樣就直接收進報告。
+
+### 下次優先順序
+- 先用 `crypto.news` 定主骨架，再用 `CoinGecko News` 決定是否加重 `RWA / 分發入口 / HYPE / Iran macro` 等短時效主線；`BlockTempo` 只保留經人工二次白名單後仍屬 crypto 或會直接影響 crypto 風險偏好的文章。
+
 ## 2026-05-22
 
 ### 本次新增觀察
