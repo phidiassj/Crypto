@@ -40,6 +40,19 @@
 ### 下次優先順序
 - 先用 `crypto.news` 定主骨架，再用 `CoinGecko News` 決定是否加重 `RWA / 分發入口 / HYPE / Iran macro` 等短時效主線；`BlockTempo` 只保留經人工二次白名單後仍屬 crypto 或會直接影響 crypto 風險偏好的文章。
 
+## 2026-05-26
+
+### 本次新增觀察
+- 這次 `crypto.news` 雖然仍是最穩的硬時間來源，但前 26 小時內明顯混入更多 `單一代幣異動 / 法律案件 / 小型市場微結構` 類新聞；像 `XRP wallets active`、`SHIB futures netflow`、`Noah Doe dormant wallets suit` 都是有效新訊，但不一定值得進主文。後續整理時應讓 `refx` 先決定主線，再用 `crypto.news` 做時間驗證與硬稿補強，否則報告容易被新鮮但不重要的 ticker noise 帶偏。
+- `CoinGecko News` 這次最有價值的仍是 `0-4` 小時雷達，而不是來源多樣性本身。它真正幫忙的是快速確認 `GELT / CLARITY / Coinbase 穩定幣風險管理 / Kohaku wallet privacy` 這些線是否已經開始密集出現；如果同一條線只在 `CoinGecko` 看到、沒有被 `refx` 或硬來源接住，就不要硬抬成重磅。
+
+### 本次踩坑
+- `crypto.news` 這次如果只按新鮮度排序，會自然偏向 `單幣價格/錢包/槓桿` 故事，反而弱化 `RWA / distribution / stablecoin rails / Iran macro` 這些更重要的全局脈絡。
+
+### 下次優先順序
+- 先讀 `refx` 抽主線，再用 `crypto.news` 只挑能替主線補硬時間與關鍵細節的文章；不要因為它更新最快，就把整份報告重心交給它。
+- `CoinGecko News` 繼續只當 `短時效 promotion/demotion radar`：用來決定某條線要不要升到重磅區，不要把它當成增加來源數量的理由。
+
 ## 2026-05-22
 
 ### 本次新增觀察
